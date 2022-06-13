@@ -1,6 +1,6 @@
 import React from 'react';
 import './navbar.css';
-import logo from './logo192.png'
+import logo from './icono.png'
 
 function NavBar () {
     return (
@@ -11,7 +11,7 @@ function NavBar () {
                     <li>Contacto</li>
                 </ul>
                 <div className='logo'>
-                    <img src={logo} className="logo"/>
+                    <img src={logo}/>
                     <h2>B-NylFactory</h2>
                 </div>
                 <ul className='login-links'>
