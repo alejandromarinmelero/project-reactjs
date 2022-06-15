@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/project-reactjs/static/css/main.3bd22f60.css",
+    "main.css": "/project-reactjs/static/css/main.1f96eb0e.css",
     "main.js": "/project-reactjs/static/js/main.fdfe761d.js",
     "static/js/787.f21a3ba1.chunk.js": "/project-reactjs/static/js/787.f21a3ba1.chunk.js",
     "static/media/vinilo-fondo.png": "/project-reactjs/static/media/vinilo-fondo.c8ccb6f3e91817f30cd3.png",
     "static/media/cart.png": "/project-reactjs/static/media/cart.1e418e32e0b2a57c6338.png",
     "index.html": "/project-reactjs/index.html",
-    "main.3bd22f60.css.map": "/project-reactjs/static/css/main.3bd22f60.css.map",
+    "main.1f96eb0e.css.map": "/project-reactjs/static/css/main.1f96eb0e.css.map",
     "main.fdfe761d.js.map": "/project-reactjs/static/js/main.fdfe761d.js.map",
     "787.f21a3ba1.chunk.js.map": "/project-reactjs/static/js/787.f21a3ba1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3bd22f60.css",
+    "static/css/main.1f96eb0e.css",
     "static/js/main.fdfe761d.js"
   ]
 }
