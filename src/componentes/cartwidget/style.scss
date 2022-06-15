@@ -9,6 +9,7 @@
     background-color: rgba(254, 52, 59, 0.2);
     border-radius: 50px;
     padding: 0.5rem;
+    transition: 0.2s ease-in-out all;
 
     p {
         font-family: 'Josefin Sans', sans-serif;
@@ -24,4 +25,5 @@
 
 .cart:hover {
     cursor: pointer;
+    background-color: rgba(254, 52, 59, 0.5);
 }
