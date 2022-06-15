@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/project-reactjs/static/css/main.4a2007ad.css",
-    "main.js": "/project-reactjs/static/js/main.662029b8.js",
+    "main.css": "/project-reactjs/static/css/main.3bd22f60.css",
+    "main.js": "/project-reactjs/static/js/main.fdfe761d.js",
     "static/js/787.f21a3ba1.chunk.js": "/project-reactjs/static/js/787.f21a3ba1.chunk.js",
-    "static/media/logo3.png": "/project-reactjs/static/media/logo3.c8ccb6f3e91817f30cd3.png",
+    "static/media/vinilo-fondo.png": "/project-reactjs/static/media/vinilo-fondo.c8ccb6f3e91817f30cd3.png",
+    "static/media/cart.png": "/project-reactjs/static/media/cart.1e418e32e0b2a57c6338.png",
     "index.html": "/project-reactjs/index.html",
-    "main.4a2007ad.css.map": "/project-reactjs/static/css/main.4a2007ad.css.map",
-    "main.662029b8.js.map": "/project-reactjs/static/js/main.662029b8.js.map",
+    "main.3bd22f60.css.map": "/project-reactjs/static/css/main.3bd22f60.css.map",
+    "main.fdfe761d.js.map": "/project-reactjs/static/js/main.fdfe761d.js.map",
     "787.f21a3ba1.chunk.js.map": "/project-reactjs/static/js/787.f21a3ba1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4a2007ad.css",
-    "static/js/main.662029b8.js"
+    "static/css/main.3bd22f60.css",
+    "static/js/main.fdfe761d.js"
   ]
 }
