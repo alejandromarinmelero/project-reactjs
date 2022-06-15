@@ -1,5 +1,9 @@
-import './App.css';
-import NavBar from './componentes/NavBar';
+import './styles/normalize.scss';
+import './styles/variables.scss';
+import './styles/globales.scss';
+import './App.scss';
+import ItemListContainer from './componentes/contenedores/ItemListContainer/ItemListContainer';
+import NavBar from './componentes/navbar';
 
 function App() {
 
@@ -8,6 +12,7 @@ function App() {
   return ( // Dentro del return va el código JSX para mostrar en el navegador
   <div className='container'>
       <NavBar />
+      <ItemListContainer greeting={'En esta sección se mostrarán los vinilos en venta'}/>
   </div>
   );
 }

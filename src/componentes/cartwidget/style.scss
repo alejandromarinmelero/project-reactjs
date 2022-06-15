@@ -1,0 +1,27 @@
+.cart {
+
+    width: 20%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: rgba(254, 52, 59, 0.2);
+    border-radius: 50px;
+    padding: 0.5rem;
+
+    p {
+        font-family: 'Josefin Sans', sans-serif;
+        margin: 0;
+    }
+
+    img {
+        width: 60%;
+        height: 60%;  
+    }
+     
+}
+
+.cart:hover {
+    cursor: pointer;
+}
