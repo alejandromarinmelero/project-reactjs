@@ -5,7 +5,7 @@ import cart from '../../assets/iconos/cart.png';
 const CartWidget = ({title}) => {
   return (
     <div className='cart' title={title}>
-        <p>0</p>
+        <span>0</span>
         <img src={cart} alt=''/>
     </div>
   )

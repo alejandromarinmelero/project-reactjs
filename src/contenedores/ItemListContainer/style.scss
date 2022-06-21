@@ -1,8 +1,16 @@
 .item-list{
+
+    // background-image: url('../../../assets/imagenes/vinilo-fondo.png');
+    // background-attachment: fixed;
+    // background-position: center;
+    // background-size: 15% 30%;
+    // background-repeat: no-repeat;
     padding: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
+    height: 100vh;
 
     h1 {
         text-align: center;

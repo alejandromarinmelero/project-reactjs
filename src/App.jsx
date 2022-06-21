@@ -2,7 +2,7 @@ import './styles/normalize.scss';
 import './styles/variables.scss';
 import './styles/globales.scss';
 import './App.scss';
-import ItemListContainer from './componentes/contenedores/ItemListContainer/ItemListContainer';
+import ItemListContainer from './contenedores/ItemListContainer/ItemListContainer';
 import NavBar from './componentes/navbar';
 
 function App() {

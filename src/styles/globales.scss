@@ -1,13 +1,26 @@
-body {
-   background-image: url('/assets/imagenes/vinilo-fondo.png');
-   background-attachment: fixed;
-   background-position: center;
-   background-size: 15% 30%;
-   background-repeat: no-repeat;
-}
-
 .container {
    width: 95%;
    max-width: 120rem;
    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+
+   .container {
+      width: 100%;
+   }
+}
+
+@media (max-width: 768px) {
+
+   .container {
+      width: 100%;
+   }
+}
+
+@media (max-width: 1140px) {
+
+   .container {
+      width: 100%;
+   }
 }

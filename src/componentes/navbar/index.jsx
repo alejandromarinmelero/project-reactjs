@@ -7,7 +7,7 @@ import logo from '../../assets/imagenes/logo.png';
 function NavBar () {
     return (
             <div className='navbar'>
-                <ul className='links'>
+                <ul className='navbar-links'>
                     <li>Tienda</li>
                     <li>Galería</li>
                     <li>Contacto</li>
@@ -16,7 +16,7 @@ function NavBar () {
                     <img src={logo} alt=''/>
                     <h2>B-NylFactory</h2>
                 </div>
-                <ul className='login-links'>
+                <ul className='navbar-secundary-links'>
                     <li>Acceder</li>
                     <li>Registrarse</li>
                     <CartWidget title={'cart'}/>
