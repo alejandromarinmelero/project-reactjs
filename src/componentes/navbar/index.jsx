@@ -19,7 +19,7 @@ function NavBar () {
                 <ul className='navbar-secundary-links'>
                     <li>Acceder</li>
                     <li>Registrarse</li>
-                    <CartWidget title={'cart'}/>
+                    <CartWidget title={'cart'} itemCart={0}/>
                 </ul>
             </div>
     )

@@ -5,13 +5,13 @@ import './style.scss';
 const ItemListContainer = ({greeting}) => {
 
   const onAdd = (count) => {
-    console.log(`Se agregaron ${count} vinilos al carrito`);
+    alert(`Se agregaron ${count} vinilos al carrito`);
   }
 
   return (
     <div className='item-list'>
         <h1>{greeting}</h1>
-        <ItemCount handleAdd={onAdd}/>
+        <ItemCount handleAdd={onAdd} stock={5}/>
     </div>
   )
 }

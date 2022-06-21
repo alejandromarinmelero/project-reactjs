@@ -2,10 +2,11 @@ import React from 'react';
 import './style.scss';
 import cart from '../../assets/iconos/cart.png';
 
-const CartWidget = ({title}) => {
+const CartWidget = ({ title, itemCart}) => {
+
   return (
     <div className='cart' title={title}>
-        <span>0</span>
+        <span>{itemCart}</span>
         <img src={cart} alt=''/>
     </div>
   )

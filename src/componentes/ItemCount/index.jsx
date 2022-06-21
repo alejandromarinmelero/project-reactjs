@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import './style.scss';
 
-const ItemCount = ({ handleAdd }) => {
-
-    const stock = 5;
+const ItemCount = ({ handleAdd, stock }) => {
 
     const [count, setCount] = useState(1);
 
@@ -23,7 +21,7 @@ const ItemCount = ({ handleAdd }) => {
             <p>{count}</p>
             <button onClick={increase} className='item-count__increase' disabled={count >= stock && true}>+</button>
         </div>
-        <button className='add-to-cart__button' onClick={handleAdd(count)}>Agregar al carrito</button>
+        <button className='add-to-cart__button' onClick={() => handleAdd(count)}>Agregar al carrito</button>
     </div>
   )
 }
