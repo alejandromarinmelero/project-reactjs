@@ -1,17 +1,31 @@
-import React from 'react';
-import ItemCount from '../../componentes/ItemCount';
+import React, { useEffect, useState } from 'react';
+import ItemList from '../../componentes/ItemList/ItemList';
 import './style.scss';
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
 
-  const onAdd = (count) => {
-    alert(`Se agregaron ${count} vinilos al carrito`);
-  }
+  const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    const getproducts = async () => {
+      try {
+        console.log('Obteniendo productos...')
+        const response = await fetch('/mocks/products.json');
+        const json = await response.json();
+        setProducts(json);
+      } catch (error) {
+        console.log(`Se produjo un error: ${error}`);
+      }
+    }
+
+    getproducts();
+  }, []) 
+
+  // console.log(products);
 
   return (
-    <div className='item-list'>
-        <h1>{greeting}</h1>
-        <ItemCount handleAdd={onAdd} stock={5}/>
+    <div className='item-list-container'>
+      {products ? <ItemList products={products}/> : null }
     </div>
   )
 }
