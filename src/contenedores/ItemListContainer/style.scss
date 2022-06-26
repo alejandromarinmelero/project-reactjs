@@ -1,25 +1,8 @@
 .item-list-container{
-
-    // background-image: url('../../../assets/imagenes/vinilo-fondo.png');
-    // background-attachment: fixed;
-    // background-position: center;
-    // background-size: 15% 30%;
-    // background-repeat: no-repeat;
-    padding: 2rem 0 1rem 0;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
-    height: 100vh;
-
-    h1 {
-        text-align: center;
-        font-family: 'Josefin Sans', sans-serif;
-        color: #FE343B;
-        font-size: 1.5rem;
-        background-color: rgba(5, 199, 147, 0.2);
-        padding: 1rem;
-        border-radius: 20px;
-        font-weight: 500;
-    }
+    background-image: url('../../assets/imagenes/vinilo-fondo.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 15% 30%;
+    background-repeat: no-repeat;
+    padding: 2rem 1rem 3rem 1rem;
 }

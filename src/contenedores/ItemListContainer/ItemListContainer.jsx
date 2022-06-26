@@ -9,8 +9,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     const getproducts = async () => {
       try {
-        console.log('Obteniendo productos...')
-        const response = await fetch('/mocks/products.json');
+        const response = await fetch('/project-reactjs/mocks/products.json');
         const json = await response.json();
         setProducts(json);
       } catch (error) {
