@@ -1,8 +1,6 @@
 import React from 'react';
 import CartWidget from '../cartwidget';
 import './style.scss';
-import logo from '../../assets/imagenes/logo.png';
-
 
 function NavBar () {
     return (
@@ -13,7 +11,7 @@ function NavBar () {
                     <li>Contacto</li>
                 </ul>
                 <div className='logo'>
-                    <img src={logo} alt=''/>
+                    <img src='/project-reactjs/assets/imagenes/logo.png' alt=''/>
                     <h2>B-NylFactory</h2>
                 </div>
                 <ul className='navbar-secundary-links'>

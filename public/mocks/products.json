@@ -6,7 +6,7 @@
         "date": "15 de marzo de 2015",
         "description": "",
         "price": 26.99,
-        "image": "/project-reactjs/imagenes/vinilos/tpab.png"
+        "image": "/project-reactjs/assets/imagenes/vinilos/tpab.png"
     },
 
     {
@@ -16,7 +16,7 @@
         "date": "1983",
         "description": "",
         "price": 16.83,
-        "image": "/project-reactjs/imagenes/vinilos/thriller.png"
+        "image": "/project-reactjs/assets/imagenes/vinilos/thriller.png"
     },
 
     {
@@ -26,7 +26,7 @@
         "date": "2 de octubre de 2012",
         "description": "",
         "price": 46.89,
-        "image": "/project-reactjs/imagenes/vinilos/tim.png"
+        "image": "/project-reactjs/assets/imagenes/vinilos/tim.png"
     },
 
     {
@@ -36,7 +36,7 @@
         "date": "22 de octubre de 2007",
         "description": "",
         "price": 36.39,
-        "image": "/project-reactjs/imagenes/vinilos/cyc.png"
+        "image": "/project-reactjs/assets/imagenes/vinilos/cyc.png"
     },
 
     {
@@ -46,7 +46,7 @@
         "date": "10 de julio de 1974",
         "description": "",
         "price": 43.59,
-        "image": "/project-reactjs/imagenes/vinilos/funka.png"
+        "image": "/project-reactjs/assets/imagenes/vinilos/funka.png"
     },
 
     {
@@ -56,7 +56,7 @@
         "date": "8 de julio de 1974",
         "description": "",
         "price": 46.99,
-        "image": "/project-reactjs/imagenes/vinilos/queen.png"
+        "image": "/project-reactjs/assets/imagenes/vinilos/queen.png"
     },
 
     {
@@ -66,7 +66,7 @@
         "date": "26 de septiembre de 1969",
         "description": "",
         "price": 65.46,
-        "image": "/project-reactjs/imagenes/vinilos/beatles.png"
+        "image": "/project-reactjs/assets/imagenes/vinilos/beatles.png"
     },
 
     {
@@ -76,7 +76,7 @@
         "date": "26 de enero de 2018",
         "description": "",
         "price": 22.10,
-        "image": "/project-reactjs/imagenes/vinilos/lebron.png"
+        "image": "/project-reactjs/assets/imagenes/vinilos/lebron.png"
     }
 
 ]

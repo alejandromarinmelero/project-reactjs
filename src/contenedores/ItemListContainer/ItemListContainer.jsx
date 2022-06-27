@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from '../../componentes/ItemList/ItemList';
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 import './style.scss';
 
 const ItemListContainer = () => {
@@ -25,6 +26,7 @@ const ItemListContainer = () => {
   return (
     <div className='item-list-container'>
       {products ? <ItemList products={products}/> : null }
+      <ItemDetailContainer />
     </div>
   )
 }

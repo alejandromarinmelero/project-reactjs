@@ -15,7 +15,6 @@ const ItemCount = ({ handleAdd, stock }) => {
 
   return (
     <div className='item-count'>
-        <h2>Contador de vinilos</h2>
         <div className='item-count__components'>
             <button onClick={decrease} disabled={count === 1 ? true : null} className='item-count__decrease'>-</button>
             <p>{count}</p>
