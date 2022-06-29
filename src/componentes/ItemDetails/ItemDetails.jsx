@@ -12,10 +12,11 @@ const ItemDetails = ({ details }) => {
     <div className='item-details'>
         <img src={details.image} alt=''></img>
         <div className='details'>
-          <p><b>Título:</b> {details.title}</p>
+          <p><b>Album:</b> {details.name}</p>
+          <p><b>Artist:</b> {details.artist}</p>
           <p><b>Precio:</b> {details.price}</p>
+          <p><b>Fecha:</b> {details.date}</p>
           <p><b>Descripción:</b> {details.description}</p>
-          <p><b>Categoría:</b> {details.category}</p>
           <ItemCount handleAdd={addToCart}/>
         </div>
     </div>

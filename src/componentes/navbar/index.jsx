@@ -1,8 +1,16 @@
 import React from 'react';
 import CartWidget from '../cartwidget';
 import './style.scss';
+import { useNavigate } from 'react-router-dom'
 
 function NavBar () {
+
+    const navigate = useNavigate();
+
+    const home = () => {
+        navigate('/project-reactjs');
+    }
+
     return (
             <div className='navbar'>
                 <ul className='navbar-links'>
@@ -10,7 +18,7 @@ function NavBar () {
                     <li>Galería</li>
                     <li>Contacto</li>
                 </ul>
-                <div className='logo'>
+                <div onClick={home} className='logo'>
                     <img src='/project-reactjs/assets/imagenes/logo.png' alt=''/>
                     <h2>B-NylFactory</h2>
                 </div>

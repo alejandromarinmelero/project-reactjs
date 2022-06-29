@@ -1,8 +1,22 @@
+html {
+   box-sizing: border-box;
+ }
+ *, *:before, *:after {
+   box-sizing: inherit;
+ }
+
 .container {
    width: 95%;
    max-width: 120rem;
    margin: 0 auto;
 }
+
+a {
+   color: black;
+   text-decoration: none;
+}
+
+// Media Queries
 
 @media (max-width: 480px) {
 

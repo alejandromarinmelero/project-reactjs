@@ -2,16 +2,20 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import ItemDetails from '../../componentes/ItemDetails/ItemDetails';
 import './style.scss'
+import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
 
-  const [productDetails, setProductDetails] = useState({});
+  const [productDetails, setProductDetails] = useState([]);
+
+  const params = useParams()
+
+  console.log(params);
 
   useEffect(() => {
-    setTimeout(() => {
         const getProductDetails = async () => {
             try{
-            const response =  await fetch('https://fakestoreapi.com/products/1');
+            const response =  await fetch('/project-reactjs/mocks/products.json');
             const dataDetails = await response.json();
             setProductDetails(dataDetails)
             } catch (error) {
@@ -20,12 +24,10 @@ const ItemDetailContainer = () => {
         }
     
         getProductDetails();
-    }, 2000)
 
   }, [])
 
-  console.log(productDetails)
-
+  console.log(productDetails);
 
   return (
     <div className='item-detail-container'>
