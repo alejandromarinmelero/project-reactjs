@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import ItemList from '../../componentes/ItemList/ItemList';
 import './style.scss';
+import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {
 
-  const [products, setProducts] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setfilteredProducts] = useState([]);
+
+  const params = useParams();
+
+  console.log(params.category)
 
   useEffect(() => {
     const getproducts = async () => {
@@ -20,9 +26,18 @@ const ItemListContainer = () => {
     getproducts();
   }, []) 
 
+  useEffect(() => {
+    if(params?.category) {
+      const productosFiltrados = products.filter(product => product.category === params.category)
+      setfilteredProducts(productosFiltrados)
+    } else {
+      setfilteredProducts(products)
+    }
+  }, [params.category, products])
+
   return (
     <div className='item-list-container'>
-      {products ? <ItemList products={products}/> : null }
+      {products ? <ItemList products={filteredProducts}/> : null }
     </div>
   )
 }

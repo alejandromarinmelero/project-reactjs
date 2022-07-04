@@ -1,11 +1,21 @@
 import React from 'react'
 import './style.scss'
 import ItemCount from '../ItemCount'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const ItemDetails = ({ details }) => {
 
+  const navigate = useNavigate();
+
+  const cart = () => {
+    navigate('/project-reactjs/cart');
+  }
+
+  const [confirm, setConfirm] = useState('');
+
   const addToCart = (count) => {
-    alert(`Se agregaron ${count} ${details.title} al carrito`);
+    setConfirm(window.confirm(`Se agregaron ${count} vinilos al carrito:\n\n ${details.artist} - ${details.name}`));
   }
 
   return (
@@ -17,7 +27,10 @@ const ItemDetails = ({ details }) => {
           <p><b>Precio:</b> {details.price}</p>
           <p><b>Fecha:</b> {details.date}</p>
           <p><b>Descripción:</b> {details.description}</p>
-          <ItemCount handleAdd={addToCart}/>
+          {confirm === true ? 
+          <button onClick={cart} className='buy'>Finalizar Compra</button> :
+          <ItemCount handleAdd={addToCart} stock={details.stock}/>
+          }
         </div>
     </div>
   )

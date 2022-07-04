@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
             try{
             const response =  await fetch('/project-reactjs/mocks/products.json');
             const dataDetails = await response.json();
-            setProductDetails(dataDetails)
+            setProductDetails(dataDetails.find(detail => detail.id === parseInt(params.productId)))
             } catch (error) {
                 console.log(`Ocurrio el siguiente error: ${error}`);
             }
@@ -25,13 +25,12 @@ const ItemDetailContainer = () => {
     
         getProductDetails();
 
-  }, [])
+  }, [params, productDetails])
 
   console.log(productDetails);
 
   return (
     <div className='item-detail-container'>
-        <h2>ItemDetailContainer Desafio</h2>
         <ItemDetails details={productDetails}/>
     </div>
   )

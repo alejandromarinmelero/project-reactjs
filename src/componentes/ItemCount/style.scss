@@ -9,7 +9,7 @@
 
     .item-count__components {
         display: flex;
-        justify-content: space;
+        justify-content: space-around;
         align-items: center;
         gap: 1rem;
         margin: 0;
@@ -34,7 +34,7 @@
         }
 
         .item-count__decrease{
-            font-size: 2rem;
+            font-size: 3rem;
             border: none;
             background: none;
             color: #4C434A;
@@ -52,7 +52,7 @@
         }
 
         p {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin: 0;
             padding: 0;
             color: #4C434A;

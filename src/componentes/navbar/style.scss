@@ -6,8 +6,7 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    border-bottom: 1px solid #E2DFE2;
-    background-color: #fff;
+    
 
     .navbar-links {
         padding: 0;
@@ -17,15 +16,75 @@
         list-style: none;
         font-family: 'Josefin Sans', sans-serif;
         color: #4C434A;
+
+        .dropdown {
+            overflow: hidden;
     
-        li {
+            .dropbtn {
+                border: 0;
+                background: none;
+                color: #4C434A;
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 1.2rem;
+                transition: 0.2s ease-in-out all;
+            }
+        
+            .dropdown-menu {
+                width: 10%;
+                padding: 0;
+                padding-top: 1rem;
+                list-style: none;
+                position: absolute;
+                display: none;
+                margin: 0;
+                background-color: #fff;
+                transition: all 0.2s ease-in-out;
+                z-index: 1;
+
+                Link {
+                    color: #4C434A;
+                }
+
+        
+                li {
+                    padding: 0.5rem 0 0.5rem 0.5rem;
+                    transition: all 0.2s ease-in-out;
+                    color: #4C434A;
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-size: 1.2rem;
+                    transition: 0.2s ease-in-out all;
+                }
+        
+                li:hover {
+                    background-color: #4C434A;
+                    color: #fff;
+                    cursor: pointer;
+                }
+
+                li:hover a {
+                    color: #fff;
+                }
+            }
+
+            .dropbtn:hover {
+                cursor: pointer;
+                color: red;
+            }  
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+              
+    
+        p {
             color: #4C434A;
             font-family: 'Josefin Sans', sans-serif;
             font-size: 1.2rem;
             transition: 0.2s ease-in-out all;
         }
 
-        li:hover {
+        p:hover {
             cursor: pointer;
             color: #FE343B;
         }

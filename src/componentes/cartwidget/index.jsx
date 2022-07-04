@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.scss';
-// import cart from '../../assets/iconos/cart.png';
 
 const CartWidget = ({ title, itemCart}) => {
 
