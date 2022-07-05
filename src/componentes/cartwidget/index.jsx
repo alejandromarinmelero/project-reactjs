@@ -6,7 +6,7 @@ const CartWidget = ({ title, itemCart}) => {
   return (
     <div className='cart' title={title}>
         <span>{itemCart}</span>
-        <img src='/project-reactjs/assets/iconos/cart.png' alt=''/>
+        <img src='/assets/iconos/cart.png' alt=''/>
     </div>
   )
 }

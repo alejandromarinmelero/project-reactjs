@@ -9,7 +9,7 @@ const ItemDetails = ({ details }) => {
   const navigate = useNavigate();
 
   const cart = () => {
-    navigate('/project-reactjs/cart');
+    navigate('/cart');
   }
 
   const [confirm, setConfirm] = useState('');

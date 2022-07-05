@@ -15,7 +15,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     const getproducts = async () => {
       try {
-        const response = await fetch('/project-reactjs/mocks/products.json');
+        const response = await fetch('/mocks/products.json');
         const json = await response.json();
         setProducts(json);
       } catch (error) {

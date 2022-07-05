@@ -20,10 +20,10 @@ function App() {
    <NavBar />
     
    <Routes>
-    <Route path='/project-reactjs' element={<ItemListContainer/>}></Route>
-    <Route path='/project-reactjs/contact' element={<Contact />}></Route>
-    <Route path='/project-reactjs/category/:category' element={<ItemListContainer />}></Route>
-    <Route path='/project-reactjs/detail/:productId' element={<ItemDetailContainer />}></Route>
+    <Route path='/' element={<ItemListContainer/>}></Route>
+    <Route path='/contact' element={<Contact />}></Route>
+    <Route path='/category/:category' element={<ItemListContainer />}></Route>
+    <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
     <Route path='*' element={<NotFound />}></Route>
     </Routes>
 

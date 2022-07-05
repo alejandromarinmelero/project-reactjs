@@ -6,7 +6,7 @@
         "date": "15 de marzo de 2015",
         "description": "To Pimp a Butterfly es el tercer álbum de estudio del rapero estadounidense Kendrick Lamar. El material lo publicó Top Dawg Entertainment y Aftermath Entertainment el 15 de marzo de 2015, mientras que Interscope Records lo distribuyó. Este fue grabado en varios estudios a lo largo de todo Estados Unidos bajo la producción ejecutiva de Dr. Dre y Anthony Top Dawg Tiffith. En cuanto a la producción musical, contó con la ayuda de Boi-1da, Flying Lotus, Terrace Martin, Pharrell Williams, Knxwledge, Sounwave, Thundercat, entre otros. Asimismo, musicalmente está inspirado por el funk, jazz y spoken word.",
         "price": 26.99,
-        "image": "/project-reactjs/assets/imagenes/vinilos/tpab.png",
+        "image": "/assets/imagenes/vinilos/tpab.png",
         "category": "rap",
         "stock": 2
     },
@@ -18,7 +18,7 @@
         "date": "1983",
         "description": "Thriller es el sexto álbum de estudio del artista estadounidense Michael Jackson, publicado el 30 de noviembre de 1982 por Epic Records. Producido por Quincy Jones —quien trabajó también en el álbum Off the Wall (1979) del mismo artista—, la obra está compuesta por un balance de varios géneros musicales: entre disco y rock, funk y balada, R&B y pop. El propio Jackson escribió cuatro de las nueve canciones del álbum.4 Las sesiones de grabación iniciaron en abril de 1982 en los estudios Westlake de Los Ángeles, con un presupuesto de producción de US$750.000 El disco contó con la colaboración de Paul McCartney, exmiembro de The Beatles, además de varios integrantes de la banda de rock Toto, entre ellos Jeff Porcaro (batería), Steve Porcaro y David Paich (teclados), Steve Lukather (guitarra) y el teclista Greg Phillinganes.",
         "price": 16.83,
-        "image": "/project-reactjs/assets/imagenes/vinilos/thriller.png",
+        "image": "/assets/imagenes/vinilos/thriller.png",
         "category": "pop",
         "stock": 4
     },
@@ -30,7 +30,7 @@
         "date": "2 de octubre de 2012",
         "description": "Después de diez años de disputas, Luaka Bop está listo para lanzar 'Nobody Can Live Forever: The Existential Soul of Tim Maia', una encuesta de quince pistas de las grabaciones de Maia de la década de 1970, completamente remasterizadas, para conmemorar lo que habría sido el 70 cumpleaños de la leyenda musical brasileña en septiembre. 28. El lanzamiento es el cuarto de la serie World Psychedelic Classics del sello, conocida por descubrir obras maestras olvidadas durante mucho tiempo de Os Mutantes, Shuggie Otis y una de las primeras recopilaciones de psicodelia y funk africanos.",
         "price": 46.89,
-        "image": "/project-reactjs/assets/imagenes/vinilos/tim.png",
+        "image": "/assets/imagenes/vinilos/tim.png",
         "category": "soul",
         "stock": 3
     },
@@ -42,7 +42,7 @@
         "date": "22 de octubre de 2007",
         "description": "Good Apollo, I'm Burning Star IV, Volume Two: No World for Tomorrow (a menudo abreviado como No World for Tomorrow), es el cuarto álbum de estudio de la banda estadounidense de rock progresivo Coheed and Cambria, lanzado el 23 de octubre de 2007. El álbum es una secuela directa de su álbum anterior, Good Apollo, I'm Burning Star IV, Volume One: From Fear Through the Eyes of Madness. El álbum comprende la cuarta parte de la narrativa Amory Wars de la banda. Es el único álbum que presenta a Taylor Hawkins en la batería, luego de la partida de Josh Eppard.",
         "price": 36.39,
-        "image": "/project-reactjs/assets/imagenes/vinilos/cyc.png",
+        "image": "/assets/imagenes/vinilos/cyc.png",
         "category": "rock",
         "stock": 3
     },
@@ -54,7 +54,7 @@
         "date": "10 de julio de 1974",
         "description": "Standing on the Verge of Getting It On es el sexto álbum de estudio de Funkadelic, lanzado por Westbound Records, lanzado en julio de 1974. Se destaca por presentar el regreso del guitarrista Eddie Hazel. En este álbum, las letras generalmente pasan a un segundo plano frente a la música y la improvisación.",
         "price": 43.59,
-        "image": "/project-reactjs/assets/imagenes/vinilos/funka.png",
+        "image": "/assets/imagenes/vinilos/funka.png",
         "category": "funk",
         "stock": 1
     },
@@ -66,7 +66,7 @@
         "date": "8 de julio de 1974",
         "description": "Queen II es el segundo álbum de estudio por la banda británica Queen. Fue publicado el 8 de marzo de 1974 por EMI Records en el Reino Unido y por Elektra Records en los Estados Unidos. Fue grabado en los estudios Trident, Londres en agosto de 1973, coproducido por Roy Thomas Baker y Robin Geoffrey Cable.",
         "price": 46.99,
-        "image": "/project-reactjs/assets/imagenes/vinilos/queen.png",
+        "image": "/assets/imagenes/vinilos/queen.png",
         "category": "rock",
         "stock": 6
     },
@@ -78,7 +78,7 @@
         "date": "26 de septiembre de 1969",
         "description": "Abbey Road es el undécimo álbum de estudio publicado por la banda británica de rock The Beatles, sería lanzado el 26 de septiembre de 1969 en Reino Unido por Apple Records. Las grabaciones de Abbey Road comenzarían en abril de 1969, haciendo de este el último álbum grabado por la banda, ya que Let It Be, lanzado en 1970, había sido grabado con anterioridad. El álbum fue producido y orquestado por George Martin, con Geoff Emerick como ingeniero de grabación.",
         "price": 65.46,
-        "image": "/project-reactjs/assets/imagenes/vinilos/beatles.png",
+        "image": "/assets/imagenes/vinilos/beatles.png",
         "category": "rock",
         "stock": 2
     },
@@ -90,7 +90,7 @@
         "date": "26 de enero de 2018",
         "description": "Lebron es, sin duda, el álbum más especial de ToteKing. En Lebron encontramos nuevas fórmulas como SUBE SUBE SUBE o BARTLEBY & CO, junto al Tote de siempre, pero con la madurez que sólo la experiencia puede proporcionar. Es el caso de Puzzle, Ellas o Nada Es Seguro.",
         "price": 22.10,
-        "image": "/project-reactjs/assets/imagenes/vinilos/lebron.png",
+        "image": "/assets/imagenes/vinilos/lebron.png",
         "category": "rap",
         "stock": 5
     }

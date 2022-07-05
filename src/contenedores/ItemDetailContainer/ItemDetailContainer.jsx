@@ -15,7 +15,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
         const getProductDetails = async () => {
             try{
-            const response =  await fetch('/project-reactjs/mocks/products.json');
+            const response =  await fetch('/mocks/products.json');
             const dataDetails = await response.json();
             setProductDetails(dataDetails.find(detail => detail.id === parseInt(params.productId)))
             } catch (error) {

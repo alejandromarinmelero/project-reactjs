@@ -7,7 +7,7 @@ const Item = ({ product }) => {
   const navigate = useNavigate()
 
   const clicItem = () => {
-    navigate(`/project-reactjs/detail/${product.id}`)
+    navigate(`/detail/${product.id}`)
   }
 
   return (

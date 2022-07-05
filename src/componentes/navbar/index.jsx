@@ -9,11 +9,11 @@ function NavBar () {
     const navigate = useNavigate();
 
     const home = () => {
-        navigate('/project-reactjs');
+        navigate('/');
     }
 
     const contact = () => {
-        navigate('/project-reactjs/contact');
+        navigate('/contact');
     }
 
     return (
@@ -23,17 +23,17 @@ function NavBar () {
                     <div className='dropdown'>
                     <button className='dropbtn'>Géneros</button>
                     <ul className='dropdown-menu'>
-                        <Link to='/project-reactjs/category/soul'><li>Soul</li></Link>
-                        <Link to='/project-reactjs/category/rap'><li>Rap</li></Link>
-                        <Link to='/project-reactjs/category/funk'><li>Funk</li></Link>
-                        <Link to='/project-reactjs/category/rock'><li>Rock</li></Link>
-                        <Link to='/project-reactjs/category/pop'><li>Pop</li></Link>
+                        <Link to='/category/soul'><li>Soul</li></Link>
+                        <Link to='/category/rap'><li>Rap</li></Link>
+                        <Link to='/category/funk'><li>Funk</li></Link>
+                        <Link to='/category/rock'><li>Rock</li></Link>
+                        <Link to='/category/pop'><li>Pop</li></Link>
                     </ul>
                     </div>
                     <p onClick={contact}>Contacto</p>
                 </div>
                 <div onClick={home} className='logo'>
-                    <img src='/project-reactjs/assets/imagenes/logo.png' alt=''/>
+                    <img src='/assets/imagenes/logo.png' alt=''/>
                     <h2>B-NylFactory</h2>
                 </div>
                 <ul className='navbar-secundary-links'>
