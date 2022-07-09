@@ -19,20 +19,46 @@
         align-items: flex-start;
         gap: 1rem;
 
-        .buy {
-            color: #4C434A;
-            background: none;
-            border: 1px solid #4C434A;
-            padding: 1rem;
-            transition: 0.2s ease-in-out all;
+        .buy-buttons {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 45%;
+
+            .continue {
+                color: #4C434A;
+                background: none;
+                border: 1px solid #4C434A;
+                padding: 1rem;
+                transition: 0.2s ease-in-out all;
+            }
+
+            .continue:hover {
+                color: #FE343B;
+                background-color: rgba(5, 199, 147, 0.2);
+                cursor: pointer;
+                border-color: #FE343B;
+            }
+
+            .buy {
+                color: #4C434A;
+                background: none;
+                border: 1px solid #4C434A;
+                padding: 1rem;
+                transition: 0.2s ease-in-out all;
+            }
+        
+            .buy:hover {
+                color: #FE343B;
+                background-color: rgba(5, 199, 147, 0.2);
+                cursor: pointer;
+                border-color: #FE343B;
+            }
         }
-    
-        .buy:hover {
-            color: #FE343B;
-            background-color: rgba(5, 199, 147, 0.2);
-            cursor: pointer;
-            border-color: #FE343B;
-        }
+
+        
     }
+    
     
 }

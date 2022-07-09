@@ -6,11 +6,11 @@ import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
 
-  const [productDetails, setProductDetails] = useState([]);
+  const [productDetails, setProductDetails] = useState({});
 
   const params = useParams()
 
-  console.log(params);
+  // console.log(params);
 
   useEffect(() => {
         const getProductDetails = async () => {
@@ -25,9 +25,9 @@ const ItemDetailContainer = () => {
     
         getProductDetails();
 
-  }, [params, productDetails])
+  }, [params])
 
-  console.log(productDetails);
+  Object.keys(productDetails).length && console.log(productDetails);
 
   return (
     <div className='item-detail-container'>

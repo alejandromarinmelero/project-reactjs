@@ -9,27 +9,31 @@ import ItemDetailContainer from './contenedores/ItemDetailContainer/ItemDetailCo
 import NotFound from './componentes/NotFound/NotFound';
 import Footer from './componentes/Footer/Footer';
 import Contact from './componentes/Contact/Contact';
+import Cart from './contenedores/Cart/Cart';
+import CartContext from './context/CartContext';
 
 function App() {
 
   // Aquí fuera va toda la lógica JavaScript
 
   return ( // Dentro del return va el código JSX para mostrar en el navegador
-  <BrowserRouter>
-  <div className='container'>
-   <NavBar />
-    
-   <Routes>
-    <Route path='/' element={<ItemListContainer/>}></Route>
-    <Route path='/contact' element={<Contact />}></Route>
-    <Route path='/category/:category' element={<ItemListContainer />}></Route>
-    <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
-    <Route path='*' element={<NotFound />}></Route>
-    </Routes>
-
-    <Footer />
-  </div>
-  </BrowserRouter>
+  <CartContext>
+    <BrowserRouter>
+      <div className='container'>
+        <NavBar />
+        
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
+          <Route path='/cart' element={<Cart />}></Route>
+          <Route path='/category/:category' element={<ItemListContainer />}></Route>
+          <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
+          <Route path='*' element={<NotFound />}></Route>
+        </Routes>
+      </div>
+      <Footer />
+    </BrowserRouter>
+  </CartContext>
   );
 }
 

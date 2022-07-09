@@ -8,9 +8,9 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setfilteredProducts] = useState([]);
 
-  const params = useParams();
+  const { category } = useParams();
 
-  console.log(params.category)
+  console.log(category)
 
   useEffect(() => {
     const getproducts = async () => {
@@ -27,18 +27,18 @@ const ItemListContainer = () => {
   }, []) 
 
   useEffect(() => {
-    if(params?.category) {
-      const productosFiltrados = products.filter(product => product.category === params.category)
+    if(category) {
+      const productosFiltrados = products.filter(product => product.category === category)
       setfilteredProducts(productosFiltrados)
     } else {
       setfilteredProducts(products)
     }
-  }, [params.category, products])
+  }, [category, products])
 
   return (
     <div className='item-list-container'>
-      {products ? <ItemList products={filteredProducts}/> : null }
-    </div>
+      <ItemList products={filteredProducts}/>
+      </div>
   )
 }
 

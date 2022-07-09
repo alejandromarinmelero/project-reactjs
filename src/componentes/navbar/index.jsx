@@ -1,11 +1,12 @@
 import React from 'react';
-import CartWidget from '../cartwidget';
+import CartWidget from '../CartWidget';
 import './style.scss';
 import { useNavigate } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
-function NavBar () {
 
+function NavBar () {
+    
     const navigate = useNavigate();
 
     const home = () => {
@@ -39,7 +40,7 @@ function NavBar () {
                 <ul className='navbar-secundary-links'>
                     <li>Acceder</li>
                     <li>Registrarse</li>
-                    <CartWidget title={'cart'} itemCart={0}/>
+                    <CartWidget />
                 </ul>
             </div>
     )

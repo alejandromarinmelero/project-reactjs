@@ -1,0 +1,106 @@
+.cart-components {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #696468;
+    gap: 5rem;
+    width: 100%;
+    padding: 3rem 2rem 5rem 2rem;  
+
+    .table-cart-products {
+        border-collapse: collapse;
+        width: 80%;
+
+        th {
+            padding: 1rem;
+            color: #696468;
+            background-color: #d2d2d2;
+        }
+
+        td {
+            color: #696468;
+            padding: 1.5rem 0.5rem 0.5rem 1rem;
+        }
+
+        .product-row {
+            width: 50%;
+        }
+        .price-row {
+            width: 15%;
+        }
+        .quantity-row {
+            width: 15%;
+        }
+
+        .element-name {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+
+            img {
+                width: 10%;
+            }
+        }
+
+        .element-quantity {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .element-price {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        
+        .element-edit {
+            text-align: center;
+        }
+
+        .element-edit:hover {
+            cursor: pointer;
+        }
+    }
+
+    .cart-buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2rem;
+        width: 80%;
+
+        .empty-cart {
+            color: #4C434A;
+            background: none;
+            border: 1px solid #4C434A;
+            padding: 1rem;
+            transition: 0.2s ease-in-out all;
+        }
+    
+        .empty-cart:hover {
+            color: #FE343B;
+            background-color: rgba(5, 199, 147, 0.2);
+            cursor: pointer;
+            border-color: #FE343B;
+        }
+    
+        .continue-shoping {
+            color: #4C434A;
+            background: none;
+            border: 1px solid #4C434A;
+            padding: 1rem;
+            transition: 0.2s ease-in-out all;
+        }
+    
+        .continue-shoping:hover {
+            color: #FE343B;
+            background-color: rgba(5, 199, 147, 0.2);
+            cursor: pointer;
+            border-color: #FE343B;
+        }
+    }
+
+    
+}

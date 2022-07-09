@@ -1,4 +1,4 @@
-.cart {
+.cart-widget {
     width: 25%;
     margin: 0;
     display: flex;
@@ -21,14 +21,14 @@
      
 }
 
-.cart:hover {
+.cart-widget:hover {
     cursor: pointer;
     background-color: rgba(254, 52, 59, 0.5);
 }
 
 @media (max-width: 1115px) {
 
-    .cart {
+    .cart-widget {
         width: 100%;
         img {
             width: 100%;
