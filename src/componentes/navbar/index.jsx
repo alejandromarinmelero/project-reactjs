@@ -13,6 +13,10 @@ function NavBar () {
         navigate('/');
     }
 
+    const shop = () => {
+        navigate('/tienda');
+    }
+
     const contact = () => {
         navigate('/contact');
     }
@@ -20,7 +24,7 @@ function NavBar () {
     return (
             <div className='navbar'>
                 <div className='navbar-links'>
-                    <p onClick={home}>Tienda</p>
+                    <p onClick={shop}>Tienda</p>
                     <div className='dropdown'>
                     <button className='dropbtn'>Géneros</button>
                     <ul className='dropdown-menu'>

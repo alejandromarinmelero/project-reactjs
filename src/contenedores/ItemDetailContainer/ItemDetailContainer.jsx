@@ -10,8 +10,6 @@ const ItemDetailContainer = () => {
 
   const params = useParams()
 
-  // console.log(params);
-
   useEffect(() => {
         const getProductDetails = async () => {
             try{
@@ -26,8 +24,6 @@ const ItemDetailContainer = () => {
         getProductDetails();
 
   }, [params])
-
-  Object.keys(productDetails).length && console.log(productDetails);
 
   return (
     <div className='item-detail-container'>

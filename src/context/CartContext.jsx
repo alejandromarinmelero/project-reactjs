@@ -23,9 +23,6 @@ const CartContext = ({ children }) => {
       }
     }
 
-    console.log(cart)
-
-
     //funcion para encontrar el producto duplicado
     const isInCart = (producto) => {
       return cart.find(producto2 => producto2.id === producto.id)

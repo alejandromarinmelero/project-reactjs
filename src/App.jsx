@@ -11,6 +11,7 @@ import Footer from './componentes/Footer/Footer';
 import Contact from './componentes/Contact/Contact';
 import CartContext from './context/CartContext';
 import Cart from './componentes/Cart/Cart';
+import Home from './componentes/Home/Home';
 
 function App() {
 
@@ -23,11 +24,12 @@ function App() {
         <NavBar />
         
         <Routes>
-          <Route path='/' element={<ItemListContainer/>}></Route>
-          <Route path='/contact' element={<Contact />}></Route>
-          <Route path='/cart' element={<Cart />}></Route>
+          <Route path='/' element={<Home />}></Route>
+          <Route path='/tienda' element={<ItemListContainer />}></Route>
           <Route path='/category/:category' element={<ItemListContainer />}></Route>
           <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
+          <Route path='/cart' element={<Cart />}></Route>
+          <Route path='/contact' element={<Contact />}></Route>
           <Route path='*' element={<NotFound />}></Route>
         </Routes>
       </div>

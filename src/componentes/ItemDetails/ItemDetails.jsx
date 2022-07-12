@@ -18,7 +18,7 @@ const ItemDetails = ({ details }) => {
   }
 
   const continueShoping = () => {
-    navigate('/');
+    navigate('/tienda');
   }
 
   const [confirm, setConfirm] = useState('');
@@ -40,8 +40,6 @@ const ItemDetails = ({ details }) => {
     )
   }
 
-  console.log(confirm.value)
-
   return (
     <div className='item-details'>
         <img src={details.image} alt=''></img>
@@ -51,6 +49,7 @@ const ItemDetails = ({ details }) => {
           <p><b>Precio:</b> {details.price} €</p>
           <p><b>Fecha:</b> {details.date}</p>
           <p><b>Descripción:</b> {details.description}</p>
+          <p><b>Stock:</b> {details.stock}</p>
           {confirm === true ? 
           <div className='buy-buttons'>
             <button className='continue' onClick={continueShoping}>Seguir comprando</button>
