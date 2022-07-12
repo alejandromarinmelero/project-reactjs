@@ -6,30 +6,41 @@ import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { Shop } from '../../context/CartContext'
 
+
 const ItemDetails = ({ details }) => {
 
-  const { addItem } = useContext(Shop);
-
-  const [qtyAdded, setQtyAdded] = useState();
+  const { addItem, Swal } = useContext(Shop);
 
   const navigate = useNavigate();
 
   const cart = () => {
-    addItem(details, qtyAdded);
     navigate('/Cart');
   }
 
   const continueShoping = () => {
-    addItem(details, qtyAdded);
     navigate('/');
   }
 
   const [confirm, setConfirm] = useState('');
 
   const addToCart = (count) => {
-    setQtyAdded(count);
-    setConfirm(window.confirm(`Se agregaron ${count} vinilos al carrito:\n\n ${details.artist} - ${details.name}`));
+    Swal.fire({
+      icon: 'question',
+      title: `${details.artist} - ${details.name} x ${count}\n\n¿Añadir al carrito?`,
+      showDenyButton: true,
+      confirmButtonText: 'Añadir',
+      denyButtonText: `No añadir`,
+    }).then((result) => {
+        if (result.isConfirmed) {
+          setConfirm(true);
+          addItem(details, count);
+          Swal.fire('Se añadió al carrito', '', 'success');
+        }
+      }
+    )
   }
+
+  console.log(confirm.value)
 
   return (
     <div className='item-details'>

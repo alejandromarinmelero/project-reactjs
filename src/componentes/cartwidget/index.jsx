@@ -14,9 +14,11 @@ const CartWidget = () => {
 
   const { cart } = useContext(Shop);
 
+  const qty = cart.reduce((acc, item) => acc + item.quantity, 0);
+
   return (
     <div className='cart-widget' onClick={toCart}>
-        {cart.length ? <span>{cart.length}</span> : '0'}
+        {cart.length ? <span>{qty}</span> : '0'}
         <img src='/assets/iconos/cart.png' alt=''/>
     </div>
   )

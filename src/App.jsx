@@ -9,8 +9,8 @@ import ItemDetailContainer from './contenedores/ItemDetailContainer/ItemDetailCo
 import NotFound from './componentes/NotFound/NotFound';
 import Footer from './componentes/Footer/Footer';
 import Contact from './componentes/Contact/Contact';
-import Cart from './contenedores/Cart/Cart';
 import CartContext from './context/CartContext';
+import Cart from './componentes/Cart/Cart';
 
 function App() {
 

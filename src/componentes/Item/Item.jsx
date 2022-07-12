@@ -16,7 +16,7 @@ const Item = ({ product }) => {
         <div className='card-details'>
           <p><b>Album:</b> {product.name}</p>
           <p><b>Artista:</b> {product.artist}</p>
-          <p><b>Precio:</b> {product.price}€</p>
+          <p><b>Precio:</b> {product.price} €</p>
         </div>
         <p className='more-info'>+ INFO</p> 
     </div>
