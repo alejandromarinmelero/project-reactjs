@@ -11,7 +11,7 @@ const Cart = () => {
   const navigate = useNavigate()
 
   const continueShoping = () => {
-    navigate('/');
+    navigate('/tienda');
   }
 
   const priceByQuantity = (item) => {
