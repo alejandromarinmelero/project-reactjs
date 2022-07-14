@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import ItemList from '../../componentes/ItemList/ItemList';
 import './style.scss';
 import { useParams } from 'react-router-dom'
+import { collection, query, getDocs } from "firebase/firestore";
+import { db } from '../../firebase/config';
+import { Circles } from  'react-loader-spinner'
+
 
 const ItemListContainer = () => {
 
@@ -13,9 +17,13 @@ const ItemListContainer = () => {
   useEffect(() => {
     const getproducts = async () => {
       try {
-        const response = await fetch('/mocks/products.json');
-        const json = await response.json();
-        setProducts(json);
+        const q = query(collection(db, "Vinilos"));
+        const querySnapshot = await getDocs(q);
+        const vinilos = [];
+        querySnapshot.forEach((doc) => {
+          vinilos.push({id: doc.id, ...doc.data()})
+        });
+        setProducts(vinilos);
       } catch (error) {
         console.log(`Se produjo un error: ${error}`);
       }
@@ -31,12 +39,20 @@ const ItemListContainer = () => {
     } else {
       setfilteredProducts(products)
     }
-  }, [category, products])
+  },[category, products])
+
 
   return (
     <div className='item-list-container'>
+      {filteredProducts.length ? 
       <ItemList products={filteredProducts}/>
-      </div>
+      :
+      <Circles 
+        height="100"
+        width="100"
+        color='#4C434A'
+        ariaLabel='loading'/>}
+    </div>
   )
 }
 

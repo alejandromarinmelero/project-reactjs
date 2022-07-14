@@ -7,6 +7,7 @@ import { useContext } from 'react'
 import { Shop } from '../../context/CartContext'
 
 
+
 const ItemDetails = ({ details }) => {
 
   const { addItem, Swal } = useContext(Shop);

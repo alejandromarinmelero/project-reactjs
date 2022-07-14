@@ -20,20 +20,19 @@ function App() {
   return ( // Dentro del return va el código JSX para mostrar en el navegador
   <CartContext>
     <BrowserRouter>
-      <div className='container'>
         <NavBar />
-        
-        <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/tienda' element={<ItemListContainer />}></Route>
-          <Route path='/category/:category' element={<ItemListContainer />}></Route>
-          <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
-          <Route path='/cart' element={<Cart />}></Route>
-          <Route path='/contact' element={<Contact />}></Route>
-          <Route path='*' element={<NotFound />}></Route>
-        </Routes>
-      </div>
-      <Footer />
+        <div className='container'>
+          <Routes>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/tienda' element={<ItemListContainer />}></Route>
+            <Route path='/category/:category' element={<ItemListContainer />}></Route>
+            <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
+            <Route path='/cart' element={<Cart />}></Route>
+            <Route path='/contact' element={<Contact />}></Route>
+            <Route path='*' element={<NotFound />}></Route>
+          </Routes>
+        </div>
+        <Footer />
     </BrowserRouter>
   </CartContext>
   );

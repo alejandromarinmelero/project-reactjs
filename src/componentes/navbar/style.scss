@@ -1,21 +1,45 @@
 .navbar {
-    padding: 1rem 0 1rem 0;
+    padding: 2rem 1rem 1rem 1rem;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
     align-items: center;
     gap: 4rem;
+    position: relative;
+    border-bottom: 1px solid #f3f3f3;
+   
+
+    .logo {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        :hover {
+            cursor: pointer;
+        }
     
+        img {
+            margin: 0;
+            width: 20%;
+        }
+    
+        h2 {
+            margin: 0;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #4C434A;
+            font-weight: 700;
+            text-shadow: 3px 3px 1px #999;
+        }
+    }
 
     .navbar-links {
-        padding: 0;
         display: flex;
-        justify-content: flex-end;
-        gap: 3rem;
-        list-style: none;
-        font-family: 'Josefin Sans', sans-serif;
-        color: #4C434A;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5rem;
+
 
         .dropdown {
             overflow: hidden;
@@ -41,11 +65,11 @@
                 transition: all 0.2s ease-in-out;
                 z-index: 1;
                 box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
+    
                 Link {
                     color: #4C434A;
                 }
-
+    
         
                 li {
                     padding: 0.5rem 0 0.5rem 0.5rem;
@@ -61,12 +85,12 @@
                     color: #fff;
                     cursor: pointer;
                 }
-
+    
                 li:hover a {
                     color: #fff;
                 }
             }
-
+    
             .dropbtn:hover {
                 cursor: pointer;
                 color: red;
@@ -76,7 +100,7 @@
         .dropdown:hover .dropdown-menu {
             display: block;
         }
-              
+                
     
         p {
             color: #4C434A;
@@ -84,60 +108,12 @@
             font-size: 1.2rem;
             transition: 0.2s ease-in-out all;
         }
-
+    
         p:hover {
             cursor: pointer;
             color: #FE343B;
         }
-    }
 
-    .logo {
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        :hover {
-            cursor: pointer;
-        }
-    
-        img {
-            margin: 0;
-            width: 25%;
-            height: 100%;
-        }
-    
-        h2 {
-            margin: 0;
-            font-family: 'Josefin Sans', sans-serif;
-            color: #4C434A;
-            font-weight: 700;
-            text-shadow: 3px 3px 1px #999;
-
-        }
-    }
-
-    .navbar-secundary-links {
-        padding: 0;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 3rem;
-        list-style: none;
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 1.2rem;
-        color: #4C434A;
-    
-        li {
-            transition: 0.2s ease-in-out all;
-        }
-
-        li:hover {
-            cursor: pointer;
-            color: #FE343B;
-        }
     }
 }
 

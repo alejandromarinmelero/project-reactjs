@@ -1,14 +1,15 @@
 .cart-widget {
-    width: 25%;
-    margin: 0;
+    width: 6%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
     background-color: rgba(254, 52, 59, 0.2);
     border-radius: 10px;
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     transition: 0.2s ease-in-out all;
+    position: absolute;
+    left: 90%;
 
     span {
         font-family: 'Josefin Sans', sans-serif;
@@ -16,7 +17,7 @@
     }
 
     img {
-        width: 45%;
+        width: 80%;
     }
      
 }
@@ -29,7 +30,7 @@
 @media (max-width: 1115px) {
 
     .cart-widget {
-        width: 100%;
+        width: 7%;
         img {
             width: 100%;
 
