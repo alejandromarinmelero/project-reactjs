@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
   useEffect(() => {
         const getProductDetails = async () => {
             try{
-              const docRef = doc(db, "Vinilos", "5VsbwuQqUmQMwk3FGGvZ");
+              const docRef = doc(db, "Vinilos", `${params.productId}`);
               const docSnap = await getDoc(docRef);
               if (docSnap.exists()) {
                 const dataDetails = {id: docSnap.id, ...docSnap.data()};
@@ -25,9 +25,6 @@ const ItemDetailContainer = () => {
                 // doc.data() will be undefined in this case
                 console.log("No such document!");
               }
-            // const response =  await fetch('/mocks/products.json');
-            // const dataDetails = await response.json();
-            // setProductDetails(dataDetails.find(detail => detail.id === parseInt(params.productId)))
             } catch (error) {
                 console.log(`Ocurrio el siguiente error: ${error}`);
             }

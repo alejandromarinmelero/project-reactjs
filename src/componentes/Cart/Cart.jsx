@@ -18,9 +18,25 @@ const Cart = () => {
     return item.price * item.quantity;
   }
 
+  const total = cart.reduce((acc, item) => acc + item.precioTotal, 0);
+
   const totalPrice = () => {
-    const total = cart.reduce((acc, item) => acc + item.precioTotal, 0);
     return total.toFixed(2);
+  }
+
+
+  const confirmarCompra = (cart) => {
+      const orden = {
+        buyer: {
+          name: 'Alex',
+          phone: 611001546,
+          email: 'alex_clasiko@hotmail.es'
+        },
+        items: cart,
+        Total: total
+    }
+    console.log(orden);
+
   }
 
   
@@ -45,7 +61,7 @@ const Cart = () => {
               <td className='element-quantity'>
                 <button className='decrease-quantity' disabled={item.quantity === 1 && true}onClick={() => quantityDecrease(item)}>-</button>
                 {item.quantity}
-                <button disabled={item.quantity > item.stock && true} onClick={() => quantityIncrease(item)} className='increase-quantity'>+</button>
+                <button disabled={item.quantity >= item.stock && true} onClick={() => quantityIncrease(item)} className='increase-quantity'>+</button>
               </td>
               <td className='element-price'>{priceByQuantity(item).toFixed(2)} €</td>
               <td className='element-edit'><img alt='delete' className='remove-item' src="https://img.icons8.com/material-two-tone/24/000000/filled-trash.png" onClick ={() => deleteItem(item)}  /></td>
@@ -60,7 +76,7 @@ const Cart = () => {
         <div className='cart-buttons'>
           <button className='empty-cart' onClick={emptyCart}>Vaciar carrito</button>
           <button className='continue-shoping' onClick={continueShoping}>Seguir comprando</button>
-          <button className='confirm-purchase'>Confirmar Compra</button>
+          <button className='confirm-purchase' onClick={() => confirmarCompra(cart)}>Confirmar Compra</button>
         </div>
       </div>
       :

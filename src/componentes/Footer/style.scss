@@ -1,9 +1,9 @@
 .footer {
     padding: 5rem 2rem 5rem 2rem;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: rgba(76, 67, 74, 0.1);
 
     .contact {
@@ -13,13 +13,42 @@
         align-items: flex-start;
         gap: 0.5rem;
         padding: 0;
+        color:#4C434A;
+
+        p {
+            transition: all 0.2s ease-in-out;
+        }
+
+        p:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            color: #FE343B;
+        }
     }
 
     .footer-elements {
+        width: 70%;
+        padding-left: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         gap: 0.5rem;
+        color:#4C434A;
+
+        p {
+            transition: all 0.2s ease-in-out;
+        }
+
+        p:hover {
+            margin-left: 2%;
+            cursor: pointer;
+            color: #FE343B;
+        }
     }
+
+    .clients img {
+        width: 100%;
+    }
+    
 }

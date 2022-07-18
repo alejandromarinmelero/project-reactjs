@@ -1,5 +1,5 @@
 .navbar {
-    padding: 2rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -7,6 +7,8 @@
     gap: 4rem;
     position: relative;
     border-bottom: 1px solid #f3f3f3;
+    background-color: rgba(76, 67, 74, 0.1);
+
    
 
     .logo {
@@ -93,7 +95,7 @@
     
             .dropbtn:hover {
                 cursor: pointer;
-                color: red;
+                color: #FE343B;
             }  
         }
         

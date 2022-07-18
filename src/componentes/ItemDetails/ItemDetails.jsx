@@ -10,11 +10,13 @@ import { Shop } from '../../context/CartContext'
 
 const ItemDetails = ({ details }) => {
 
-  const { addItem, Swal } = useContext(Shop);
-
+  const { isInCart, addItem, Swal } = useContext(Shop);
+  
   const navigate = useNavigate();
 
-  const cart = () => {
+  const productoDuplicado = isInCart(details)
+
+  const ToCart = () => {
     navigate('/Cart');
   }
 
@@ -25,20 +27,45 @@ const ItemDetails = ({ details }) => {
   const [confirm, setConfirm] = useState('');
 
   const addToCart = (count) => {
-    Swal.fire({
-      icon: 'question',
-      title: `${details.artist} - ${details.name} x ${count}\n\n¿Añadir al carrito?`,
-      showDenyButton: true,
-      confirmButtonText: 'Añadir',
-      denyButtonText: `No añadir`,
-    }).then((result) => {
-        if (result.isConfirmed) {
-          setConfirm(true);
-          addItem(details, count);
-          Swal.fire('Se añadió al carrito', '', 'success');
-        }
+      if(productoDuplicado){
+        count > (details.stock - productoDuplicado.quantity) ?
+        Swal.fire({
+          icon: 'error',
+          title: 'No hay stock, lo sentimos :(',
+          confirmButtonText: 'Ok',
+        })
+        :
+        Swal.fire({
+          icon: 'question',
+          title: `${details.artist} - ${details.name} x ${count}\n\n¿Añadir al carrito?`,
+          showDenyButton: true,
+          confirmButtonText: 'Añadir',
+          denyButtonText: `No añadir`,
+        }).then((result) => {
+            if (result.isConfirmed) {
+              setConfirm(true);
+              addItem(details, count);
+              Swal.fire('Se añadió al carrito', '', 'success');
+            }
+          }
+        )    
+      } else {
+        Swal.fire({
+          icon: 'question',
+          title: `${details.artist} - ${details.name} x ${count}\n\n¿Añadir al carrito?`,
+          showDenyButton: true,
+          confirmButtonText: 'Añadir',
+          denyButtonText: `No añadir`,
+        }).then((result) => {
+            if (result.isConfirmed) {
+              setConfirm(true);
+              addItem(details, count);
+              Swal.fire('Se añadió al carrito', '', 'success');
+            }
+          }
+        )    
       }
-    )
+      
   }
 
   return (
@@ -50,12 +77,27 @@ const ItemDetails = ({ details }) => {
           <p><b>Precio:</b> {details.price} €</p>
           <p><b>Fecha:</b> {details.date}</p>
           <p><b>Descripción:</b> {details.description}</p>
+          {productoDuplicado ? 
+            productoDuplicado.quantity >= details.stock ?
+              <p><b>Stock:</b><b className='no-stock'> No hay stock</b></p>
+            :
+              <p><b>Stock:</b> {details.stock}</p>
+          :
           <p><b>Stock:</b> {details.stock}</p>
-          {confirm === true ? 
+          }
+          {confirm === true ?
           <div className='buy-buttons'>
             <button className='continue' onClick={continueShoping}>Seguir comprando</button>
-            <button className='buy' onClick={cart}>Finalizar Compra</button>
+            <button className='buy' onClick={ToCart}>Ir al carrito</button>
           </div>
+          : productoDuplicado ?
+            productoDuplicado.quantity >= details.stock ?
+              <div className='buy-buttons'>
+                <button className='continue' onClick={continueShoping}>Seguir comprando</button>
+                <button className='buy' onClick={ToCart}>Ir al carrito</button>
+              </div>
+            :
+            <ItemCount handleAdd={addToCart} stock={details.stock}/>
           :
           <ItemCount handleAdd={addToCart} stock={details.stock}/>
           }

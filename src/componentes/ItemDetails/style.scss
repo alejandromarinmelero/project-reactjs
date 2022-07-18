@@ -19,12 +19,16 @@
         align-items: flex-start;
         gap: 1rem;
 
+        .no-stock {
+            color:red;
+        }
+
         .buy-buttons {
             margin-top: 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 45%;
+            width: 40%;
 
             .continue {
                 color: #4C434A;

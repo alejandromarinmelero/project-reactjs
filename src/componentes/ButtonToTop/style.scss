@@ -1,0 +1,25 @@
+.to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 80%;
+    right: 0;
+    left: 90%;
+    bottom: 0;
+    padding: 1.2rem 0 1.2rem 0;
+    background-color: #909090;
+    width: 3.5%;
+    height: 4%;
+    opacity: 1;
+    transition: all 0.8s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.to-top:hover {
+    cursor: pointer;
+}
+
+.hide-to-top {
+    opacity: 0;
+}

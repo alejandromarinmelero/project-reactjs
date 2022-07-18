@@ -82,9 +82,8 @@ const CartContext = ({ children }) => {
       setCart([...cart])
     }
 
-
   return (
-    <Shop.Provider value={{ addItem, cart, emptyCart, deleteItem, quantityDecrease, quantityIncrease, Swal}}>
+    <Shop.Provider value={{ addItem, cart, emptyCart, deleteItem, quantityDecrease, quantityIncrease, Swal, isInCart}}>
         {children}
     </Shop.Provider>
   )

@@ -1,7 +1,10 @@
 import React from 'react'
+import ButtonToTop from '../ButtonToTop/ButtonToTop'
 import './style.scss'
 
+
 const Home = () => {
+
   return (
     <div className='home'>
         <div className='banner'>
@@ -9,7 +12,7 @@ const Home = () => {
             <img src='/assets/imagenes/home/banner.jpg' alt='banner'></img>
         </div>
         <div className='app-movil'>
-            <h1>- DESCARGATE YA NUESTRA APP -</h1>
+            <h1>- DESCARGATE NUESTRA APP -</h1>
             <div className='app-movil-content'>
                 <div className='app-movil-titles'>
                     <h1>B-NylPhone</h1>
@@ -18,10 +21,7 @@ const Home = () => {
                 <img src='/assets/imagenes/home/app.jpg' alt='banner'></img>
             </div>
         </div>
-        <div className='clients'>
-            <h1>- ¡NUESTROS CLIENTES SI QUE SABEN! -</h1>
-            <img src='/assets/imagenes/home/clientes.jpg' alt='banner'></img>
-        </div>
+        <ButtonToTop />
     </div>
   )
 }

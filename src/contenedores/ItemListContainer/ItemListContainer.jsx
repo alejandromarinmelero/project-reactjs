@@ -47,11 +47,13 @@ const ItemListContainer = () => {
       {filteredProducts.length ? 
       <ItemList products={filteredProducts}/>
       :
-      <Circles 
-        height="100"
-        width="100"
-        color='#4C434A'
-        ariaLabel='loading'/>}
+      <div className='loading'>
+        <Circles 
+          height="100"
+          width="100"
+          color='#4C434A'
+          ariaLabel='loading'/>
+      </div>}
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonToTop from '../ButtonToTop/ButtonToTop';
 import Item from '../Item/Item';
 import './style.scss';
 
@@ -13,6 +14,7 @@ const ItemList = ({products}) => {
   return (
     <div className='item-list'>
         {items}
+        <ButtonToTop />
     </div>
   )
 }

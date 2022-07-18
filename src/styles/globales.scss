@@ -9,6 +9,11 @@ html {
  body {
    font-family: 'Josefin Sans', sans-serif;
    background-color: transparent;
+   background-image: url('../../public/assets/imagenes/global/background.png');
+   background-attachment: fixed;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
  }
 
 .container {

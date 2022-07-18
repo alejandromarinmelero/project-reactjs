@@ -22,7 +22,7 @@ function NavBar () {
     }
 
     return (
-            <div className='navbar'>
+            <div className='navbar' id='navbar' name='navbar'>
                 <div onClick={home} className='logo'>
                     <img src='/assets/imagenes/logo.png' alt=''/>
                     <h2>B-NylFactory</h2>
