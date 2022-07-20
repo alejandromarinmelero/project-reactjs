@@ -14,11 +14,13 @@ const Item = ({ product }) => {
     <div onClick={clicItem} className='card'>
         <img src={product.image} alt=''></img>
         <div className='card-details'>
-          <p><b>Album:</b> {product.name}</p>
-          <p><b>Artista:</b> {product.artist}</p>
-          <p><b>Precio:</b> {product.price} €</p>
+          <p>{product.name}</p>
+          <p>{product.price} €</p>
         </div>
-        <p className='more-info'>+ INFO</p> 
+        <div className='more-info' onClick={clicItem}>
+          <span>+</span>
+          <p>INFO</p> 
+        </div>
     </div>
   )
 }

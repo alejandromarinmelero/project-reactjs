@@ -85,7 +85,7 @@ const ItemDetails = ({ details }) => {
           :
           <p><b>Stock:</b> {details.stock}</p>
           }
-          {confirm === true ?
+          {confirm === true || details.stock === 0 ?
           <div className='buy-buttons'>
             <button className='continue' onClick={continueShoping}>Seguir comprando</button>
             <button className='buy' onClick={ToCart}>Ir al carrito</button>

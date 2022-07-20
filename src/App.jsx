@@ -12,6 +12,7 @@ import Contact from './componentes/Contact/Contact';
 import CartContext from './context/CartContext';
 import Cart from './componentes/Cart/Cart';
 import Home from './componentes/Home/Home';
+import PurchaseForm from './componentes/PurchaseForm/PurchaseForm';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
             <Route path='/category/:category' element={<ItemListContainer />}></Route>
             <Route path='/detail/:productId' element={<ItemDetailContainer />}></Route>
             <Route path='/cart' element={<Cart />}></Route>
+            <Route path='/purchase' element={<PurchaseForm />}></Route>
             <Route path='/contact' element={<Contact />}></Route>
             <Route path='*' element={<NotFound />}></Route>
           </Routes>

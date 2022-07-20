@@ -31,7 +31,7 @@
             width: 40%;
 
             .continue {
-                color: #4C434A;
+                color: #0A3033;
                 background: none;
                 border: 1px solid #4C434A;
                 padding: 1rem;
@@ -39,14 +39,14 @@
             }
 
             .continue:hover {
-                color: #FE343B;
-                background-color: rgba(5, 199, 147, 0.2);
+                order: 1px solid #0A3033;
+                color: #f3f3f3;
+                background-color: #0A3033;
                 cursor: pointer;
-                border-color: #FE343B;
             }
 
             .buy {
-                color: #4C434A;
+                color: #0A3033;
                 background: none;
                 border: 1px solid #4C434A;
                 padding: 1rem;
@@ -54,10 +54,10 @@
             }
         
             .buy:hover {
-                color: #FE343B;
-                background-color: rgba(5, 199, 147, 0.2);
+                order: 1px solid #0A3033;
+                color: #f3f3f3;
+                background-color: #0A3033;
                 cursor: pointer;
-                border-color: #FE343B;
             }
         }
 

@@ -5,20 +5,8 @@ const Footer = () => {
  
   return (
     <div className='footer'>
-        <div className='contact'>
-            <h2>Contáctanos</h2>
-            <p>info@bnylfactory.com</p>
-        </div>
-        <div className='clients'>
-            <img src='/assets/imagenes/home/clientes.jpg' alt='banner'></img>
-        </div>
-        <div className='footer-elements'>
-            <p>Lorem ipsum dolor</p>
-            <p>Consectetur adipisicing elit</p>
-            <p>Sapiente neque </p>
-            <p>Pariatur</p>
-            <p>Tempora deleniti esse</p>
-        </div>
+        <img src='/assets/imagenes/home/clientes.jpg' alt='banner'></img>
+        <p>© 2022 B-NylFactory - Alejandro Marín Melero</p>
     </div>
   )
 }

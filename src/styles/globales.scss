@@ -1,5 +1,4 @@
 html {
-   position: relative;
    box-sizing: border-box;
  }
  *, *:before, *:after {
@@ -8,12 +7,8 @@ html {
 
  body {
    font-family: 'Josefin Sans', sans-serif;
-   background-color: transparent;
-   background-image: url('../../public/assets/imagenes/global/background.png');
-   background-attachment: fixed;
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
+   min-height: 100vh;
+   position: relative;
  }
 
 .container {
@@ -33,7 +28,7 @@ h1,h2,h3 {
 }
 
 a {
-   color: #4C434A;
+   color: #57cc99;
    text-decoration: none;
 }
 

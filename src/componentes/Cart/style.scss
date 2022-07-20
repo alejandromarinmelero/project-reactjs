@@ -3,14 +3,15 @@
     flex-direction: column;
     align-items: center;
     color: #696468;
-    gap: 2rem;
+    gap: 3rem;
     width: 100%;
-    padding: 3rem 2rem 2rem 2rem;  
+    min-height: 100vh;
+    padding: 3rem 2rem 5rem 2rem;  
 
     .table-cart-products {
         border-collapse: collapse;
         width: 80%;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        box-shadow: rgba(0, 0, 0, 0) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
         
         th {
             padding: 1rem;
@@ -93,6 +94,10 @@
         
         .element-edit {
             text-align: center;
+            
+            img {
+                width: 20%;
+            }
         }
 
         .element-edit:hover {
@@ -102,7 +107,7 @@
 
     .table-results{
         width: 20%;
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        box-shadow: rgba(0, 0, 0, 0) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -110,9 +115,9 @@
     }
 
     .cart-buttons {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
         width: 80%;
         margin-top: 3rem;
 
@@ -125,10 +130,10 @@
         }
     
         .empty-cart:hover {
-            color: #FE343B;
-            background-color: rgba(5, 199, 147, 0.2);
+            border: 1px solid #0A3033;
+            color: #f3f3f3;
+            background-color: #0A3033;
             cursor: pointer;
-            border-color: #FE343B;
         }
 
         .confirm-purchase {
@@ -140,15 +145,15 @@
         }
     
         .confirm-purchase:hover {
-            color: #FE343B;
-            background-color: rgba(5, 199, 147, 0.2);
+            border: 1px solid #0A3033;
+            color: #f3f3f3;
+            background-color: #0A3033;
             cursor: pointer;
-            border-color: #FE343B;
         }
     }
 
     .continue-shoping {
-        color: #4C434A;
+        color: #0A3033;
         background: none;
         border: 1px solid #4C434A;
         padding: 1rem;
@@ -156,10 +161,10 @@
     }
 
     .continue-shoping:hover {
-        color: #FE343B;
-        background-color: rgba(5, 199, 147, 0.2);
+        border: 1px solid #0A3033;
+        color: #f3f3f3;
+        background-color: #0A3033;
         cursor: pointer;
-        border-color: #FE343B;
     }
     
 }

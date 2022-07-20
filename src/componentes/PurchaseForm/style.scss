@@ -1,0 +1,102 @@
+.purchase-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    min-height: 100vh;
+    padding: 3rem 2rem 5rem 2rem;
+
+    h1 {
+        color: rgba(10, 48, 51, 0.8);
+    }
+
+    .form {
+        width: 30%;
+        padding: 2rem;
+        border: 5px solid rgba(10, 48, 51, 0.8);
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2.5rem;
+
+        label {
+            color: rgba(10, 48, 51, 1);
+            font-size: 1.2rem;
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            background: none;
+            border-bottom: 1px solid rgba(10, 48, 51, 1);
+            outline: none;
+            font-weight: 400;
+        }
+
+        .incorrecto {
+            width: 100%;
+            border: none;
+            background: none;
+            border-bottom: 2px solid #ef233c;
+            outline: none;
+            font-weight: 400;
+        }
+
+        .correcto {
+            width: 100%;
+            border: none;
+            background: none;
+            border-bottom: 2px solid #8ac926;
+            outline: none;
+            font-weight: 400;
+        }
+
+        input:focus::placeholder {
+            color: transparent;
+        }
+
+        .form-buttons {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.5rem;
+        }
+
+        .atras {
+            color: #4C434A;
+            background: none;
+            border: 1px solid #4C434A;
+            padding: 1rem;
+            transition: 0.2s ease-in-out all;
+        }
+
+        .atras:hover {
+            border: 1px solid #0A3033;
+            color: #f3f3f3;
+            background-color: #0A3033;
+            cursor: pointer;
+        }
+
+        .confirm-purchase {
+            color: #f3f3f3;
+            background-color: #0A3033;
+            border: 1px solid #0A3033;
+            padding: 1rem;
+            transition: 0.2s ease-in-out all;
+        }
+
+        .confirm-purchase:hover {
+            border: 1px solid #0A3033;
+            color: #0A3033;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    }
+}

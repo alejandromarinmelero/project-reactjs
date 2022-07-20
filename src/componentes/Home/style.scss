@@ -1,29 +1,46 @@
 .home {
     animation: appear 0.5s;
-    padding: 2rem 0 5rem 0;
+    padding: 4rem 0 10rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @keyframes appear {
-        from {margin-top: 100%;}
-        to {margin-top: 0;}
+        from {opacity: 0;}
+        to {opacity: 1;}
     }
 }
 
-.banner {
-    width: 100%;
-    margin: 0 auto;
-    height: 80vh;
-    position: relative;
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 50%;
+    height: 20vh;
 
-    .overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(171, 171, 171, 0.2);
+    h1 {
+        color: #0A3033;
+        font-weight: 400;
+        font-size: 3rem;
     }
 
-    img {
-        width: 100%;
-        height: 100%;
+    .enter {
+        color: #0A3033;
+        background: none;
+        border: 1px solid #0A3033;
+        padding: 1rem;
+        transition: 0.2s ease-in-out all;
+        width: 20%;
+    }
+
+    .enter:hover {
+        border: 1px solid #0A3033;
+        color: #f3f3f3;
+        background-color: #0A3033;
+        cursor: pointer;
     }
 }
 

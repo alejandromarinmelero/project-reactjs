@@ -13,7 +13,7 @@ function NavBar () {
         navigate('/');
     }
 
-    const shop = () => {
+    const shop = (e) => {
         navigate('/tienda');
     }
 
@@ -30,18 +30,19 @@ function NavBar () {
                 <div className='navbar-links'>
                     <p onClick={shop}>Tienda</p>
                     <div className='dropdown'>
-                        <button className='dropbtn'>Géneros</button>
-                        <ul className='dropdown-menu'>
-                            <Link to='/category/soul'><li>Soul</li></Link>
-                            <Link to='/category/rap'><li>Rap</li></Link>
-                            <Link to='/category/funk'><li>Funk</li></Link>
-                            <Link to='/category/rock'><li>Rock</li></Link>
-                            <Link to='/category/pop'><li>Pop</li></Link>
-                        </ul>
+                        <li className='dropbtn'>Géneros
+                            <ul className='dropdown-menu'>
+                                <Link to='/category/soul'><li>Soul</li></Link>
+                                <Link to='/category/rap'><li>Rap</li></Link>
+                                <Link to='/category/funk'><li>Funk</li></Link>
+                                <Link to='/category/rock'><li>Rock</li></Link>
+                                <Link to='/category/pop'><li>Pop</li></Link>
+                            </ul>
+                        </li>
                     </div>
                     <p onClick={contact}>Contacto</p>
+                    <CartWidget />
                 </div>
-                <CartWidget />
             </div>
     )
 }

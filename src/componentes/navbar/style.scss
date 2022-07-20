@@ -1,22 +1,21 @@
 .navbar {
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 1.5rem 1rem 0.5rem 1rem;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 4rem;
-    position: relative;
-    border-bottom: 1px solid #f3f3f3;
-    background-color: rgba(76, 67, 74, 0.1);
-
-   
+    position: relative;    
 
     .logo {
         padding: 0;
         margin: 0;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        gap: 0.5rem;
 
         :hover {
             cursor: pointer;
@@ -28,9 +27,10 @@
         }
     
         h2 {
+            font-size: 2rem;
             margin: 0;
             font-family: 'Josefin Sans', sans-serif;
-            color: #4C434A;
+            color: #0A3033;
             font-weight: 700;
             text-shadow: 3px 3px 1px #999;
         }
@@ -38,10 +38,9 @@
 
     .navbar-links {
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         gap: 5rem;
-
 
         .dropdown {
             overflow: hidden;
@@ -49,42 +48,36 @@
             .dropbtn {
                 border: 0;
                 background: none;
-                color: #4C434A;
+                color: #0A3033;
                 font-family: 'Josefin Sans', sans-serif;
                 font-size: 1.2rem;
+                font-weight: 400;
                 transition: 0.2s ease-in-out all;
             }
         
             .dropdown-menu {
+                max-height: 0;
                 width: 10%;
                 padding: 0;
-                padding-top: 1rem;
-                list-style: none;
                 position: absolute;
-                display: none;
+                overflow: hidden;
+                list-style: none;
                 margin: 0;
-                background-color: #fff;
                 transition: all 0.2s ease-in-out;
                 z-index: 1;
-                box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    
-                Link {
-                    color: #4C434A;
-                }
-    
+                background-color: #0A3033;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;   
         
                 li {
                     padding: 0.5rem 0 0.5rem 0.5rem;
-                    transition: all 0.2s ease-in-out;
-                    color: #4C434A;
+                    color: #f3f3f3;
                     font-family: 'Josefin Sans', sans-serif;
                     font-size: 1.2rem;
-                    transition: 0.2s ease-in-out all;
                 }
         
                 li:hover {
-                    background-color: #4C434A;
-                    color: #fff;
+                    background-color: #f3f3f3;
+                    color: #0A3033;
                     cursor: pointer;
                 }
     
@@ -95,25 +88,26 @@
     
             .dropbtn:hover {
                 cursor: pointer;
-                color: #FE343B;
-            }  
-        }
-        
-        .dropdown:hover .dropdown-menu {
-            display: block;
+                color: #1B8188;
+            }
+            
+            .dropbtn:hover .dropdown-menu {
+                max-height: 65%;
+            }
         }
                 
     
         p {
-            color: #4C434A;
+            color: #0A3033;
             font-family: 'Josefin Sans', sans-serif;
             font-size: 1.2rem;
+            font-weight: 400;
             transition: 0.2s ease-in-out all;
         }
     
         p:hover {
             cursor: pointer;
-            color: #FE343B;
+            color: #1B8188;
         }
 
     }
@@ -158,7 +152,7 @@
                 text-align: center;
                 width: 100%;
                 padding: 1.5rem 0 1.5rem 0;
-                background-color: #4C434A;
+                background-color: #0A3033;
                 color: #fff;
             }
     
@@ -179,7 +173,7 @@
                 text-align: center;
                 width: 100%;
                 padding: 1.5rem 0 1.5rem 0;
-                background-color: #4C434A;
+                background-color: #0A3033;
                 color: #fff;
             }
     
@@ -234,7 +228,7 @@
                 text-align: center;
                 width: 100%;
                 padding: 1.5rem 0 1.5rem 0;
-                background-color: #4C434A;
+                background-color: #0A3033;
                 color: #fff;
             }
     
@@ -255,7 +249,7 @@
                 text-align: center;
                 width: 100%;
                 padding: 1.5rem 0 1.5rem 0;
-                background-color: #4C434A;
+                background-color: #0A3033;
                 color: #fff;
             }
     
@@ -307,7 +301,7 @@
                 text-align: center;
                 width: 100%;
                 padding: 1.5rem 0 1.5rem 0;
-                background-color: #4C434A;
+                background-color: #0A3033;
                 color: #fff;
             }
     
@@ -328,7 +322,7 @@
                 text-align: center;
                 width: 100%;
                 padding: 1.5rem 0 1.5rem 0;
-                background-color: #4C434A;
+                background-color: #0A3033;
                 color: #fff;
             }
     

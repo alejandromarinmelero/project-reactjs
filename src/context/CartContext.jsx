@@ -30,36 +30,25 @@ const CartContext = ({ children }) => {
 
     //Vaciar carrito
     const emptyCart = () => {
-      Swal.fire({
-        icon: 'warning',
-        title: `Vaciar carrito\n\n¿Está seguro?`,
-        showDenyButton: true,
-        confirmButtonText: 'Vaciar',
-        denyButtonText: `No vaciar`,
-      }).then((result) => {
-          if (result.isConfirmed) {
-            setCart([])
-            Swal.fire('El carrito se vació', '', 'success');
-          }
-        }
-      )
+      setCart([])
     }
 
     //Eliminar un Item del carrito
     const deleteItem = (item) => {
       Swal.fire({
+        title: 'Estas segur@?',
+        text: `Eliminar\n\n${item.artist} - ${item.name}`,
         icon: 'warning',
-        title: `Eliminar\n\n${item.artist} - ${item.name}\n\n¿Está seguro?`,
-        showDenyButton: true,
-        confirmButtonText: 'Eliminar',
-        denyButtonText: `No eliminar`,
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Eliminar!'
       }).then((result) => {
-          if (result.isConfirmed) {
-            setCart([...cart].filter(ele => ele.id !== item.id))
+        if (result.isConfirmed) {
+          setCart([...cart].filter(ele => ele.id !== item.id))
             Swal.fire('Se elimino correctamente', '', 'success');
-          }
         }
-      )
+      })
     }
 
     //Disminuir cantidad en carrito
@@ -82,8 +71,13 @@ const CartContext = ({ children }) => {
       setCart([...cart])
     }
 
+    //Total del carrito
+    const total =  cart.reduce((acc, item) => acc + item.precioTotal, 0);
+
+    //
+
   return (
-    <Shop.Provider value={{ addItem, cart, emptyCart, deleteItem, quantityDecrease, quantityIncrease, Swal, isInCart}}>
+    <Shop.Provider value={{ addItem, cart, emptyCart, deleteItem, quantityDecrease, quantityIncrease, Swal, isInCart, total}}>
         {children}
     </Shop.Provider>
   )
