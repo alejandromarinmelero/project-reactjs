@@ -13,6 +13,7 @@ const PurchaseForm = () => {
 
   const toCart = () => {
     navigate('/cart')
+    window.scroll(0,0)
   }
 
   const { cart, total, Swal, emptyCart } = useContext(Shop);
@@ -119,12 +120,13 @@ const PurchaseForm = () => {
       const orden = generarOrden(nombre, telefono, email, cart, total);
       console.log(orden);
       guardarOrden(cart, orden);
+      setTimeout(() => {
+        emptyCart();
+        navigate('/tienda');
+      }, 3500);
     }
 
-    setTimeout(() => {
-      emptyCart();
-      navigate('/tienda');
-    }, 2500);
+    
 
   }
 

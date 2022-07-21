@@ -18,7 +18,6 @@ const ButtonToTop = () => {
         };
       }, [scroll]);
 
-      console.log(window.screen.top);
 
   return (
     <div onClick={() => {

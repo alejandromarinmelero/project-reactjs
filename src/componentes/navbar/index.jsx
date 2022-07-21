@@ -3,22 +3,37 @@ import CartWidget from '../CartWidget';
 import './style.scss';
 import { useNavigate } from 'react-router-dom'
 import {Link} from 'react-router-dom'
+import { useRef } from 'react';
 
 
 function NavBar () {
     
+    const tienda = useRef('');
+    const contacto = useRef('');
+
     const navigate = useNavigate();
 
-    const home = () => {
-        navigate('/');
+    const home = (e) => {
+        navigate('/')
+        contacto.current.classList.remove('selected')
+        tienda.current.classList.remove('selected')
     }
 
-    const shop = (e) => {
-        navigate('/tienda');
-    }
-
-    const contact = () => {
-        navigate('/contact');
+    const selected = (e) => {
+        switch (e.target.attributes.name.value) {
+            case 'tienda':
+                navigate('/tienda');
+                e.target.classList.add('selected')
+                contacto.current.classList.remove('selected')
+                break;
+            case 'contacto':
+                navigate('/contact');
+                e.target.classList.add('selected')
+                tienda.current.classList.remove('selected')
+                break;
+            default:
+                break;
+        }
     }
 
     return (
@@ -28,7 +43,7 @@ function NavBar () {
                     <h2>B-NylFactory</h2>
                 </div>
                 <div className='navbar-links'>
-                    <p onClick={shop}>Tienda</p>
+                    <p name='tienda' ref={tienda} onClick={selected}>Tienda</p>
                     <div className='dropdown'>
                         <li className='dropbtn'>Géneros
                             <ul className='dropdown-menu'>
@@ -40,7 +55,7 @@ function NavBar () {
                             </ul>
                         </li>
                     </div>
-                    <p onClick={contact}>Contacto</p>
+                    <p name='contacto' ref={contacto} onClick={selected}>Contacto</p>
                     <CartWidget />
                 </div>
             </div>

@@ -14,6 +14,7 @@ const Cart = () => {
 
   const continueShoping = () => {
     navigate('/tienda');
+    window.scroll(0,0)
   }
 
   const priceByQuantity = (item) => {
@@ -22,6 +23,7 @@ const Cart = () => {
 
   const confirmarCompra = () => {
       navigate('/purchase');
+      window.scroll(0,0)
   }
 
   

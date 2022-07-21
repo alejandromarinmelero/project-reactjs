@@ -1,4 +1,3 @@
-import React from 'react'
 import './style.scss'
 import ItemCount from '../ItemCount'
 import { useState } from 'react'
@@ -18,10 +17,12 @@ const ItemDetails = ({ details }) => {
 
   const ToCart = () => {
     navigate('/Cart');
+    window.scroll(0,0)
   }
 
   const continueShoping = () => {
     navigate('/tienda');
+    window.scroll(0,0)
   }
 
   const [confirm, setConfirm] = useState('');

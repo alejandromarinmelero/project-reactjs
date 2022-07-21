@@ -27,7 +27,7 @@
         }
     
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin: 0;
             font-family: 'Josefin Sans', sans-serif;
             color: #0A3033;
@@ -44,7 +44,7 @@
 
         .dropdown {
             overflow: hidden;
-    
+
             .dropbtn {
                 border: 0;
                 background: none;
@@ -103,11 +103,19 @@
             font-size: 1.2rem;
             font-weight: 400;
             transition: 0.2s ease-in-out all;
+            padding: 0.5rem;
         }
     
         p:hover {
             cursor: pointer;
             color: #1B8188;
+        }
+
+        .selected {
+            background-color: rgba(30, 130, 137, 0.8);
+            border-radius: 10px;
+            padding: 0.5rem;
+            color: #f3f3f3;
         }
 
     }
