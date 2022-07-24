@@ -4,13 +4,13 @@ Alejandro Marín Melero - Curso React Js Coder House
 // TiendaVinilosMarin //
 
 
-Mi proyecto para este curso de React de Corder House es una e-commerce de vinilos, donde se pueden comprar distintos vinilos de distintos géneros musicales.
+Mi proyecto para este curso de React de Corder House es una e-commerce de vinilos, donde se pueden comprar distintos vinilos de diferentes géneros musicales.
 
 el proyecto está creado sobre el arbol de directorios creado a partir del comando:
 
 - npx create-react-app "nombre del proyecto"
 
-Con la siguiente estructura:
+Con la siguiente estructura de directorios:
 
 - project-reactjs "/"
     - public
