@@ -60,5 +60,9 @@ El flow principal de la aplicación contiene los siguientes componentes (contene
 - Cart
 - PurchaseForm
 
+Presentación:
+
+![alt-text](https://github.com/alejandromarinmelero/project-reactjs/blob/main/public/assets/gifs/B-NylFactory.gif)
+
 
 TiendaVinilosMarin © Alejandro Marín Melero
