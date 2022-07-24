@@ -3,9 +3,10 @@ import './style.scss'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { Shop } from '../../context/CartContext'
-import generarOrden from '../../utils/generarOrden'
-import guardarOrden from '../../utils/guardarOrden'
+import generateOrder from '../../utils/generarOrden'
+import saveOrder from '../../utils/guardarOrden'
 import { useState } from 'react'
+import ItemListContainer from '../../contenedores/ItemListContainer/ItemListContainer'
 
 const PurchaseForm = () => {
 
@@ -18,19 +19,19 @@ const PurchaseForm = () => {
 
   const { cart, total, Swal, emptyCart } = useContext(Shop);
 
-  const [nombre, setNombre] = useState('');
-  const [direccion, setDireccion] = useState('');
-  const [telefono, setTelefono] = useState('');
+  const [name, setName] = useState('');
+  const [direction, setDirecction] = useState('');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
-  const [confirmarEmail, setConfirmarEmail] = useState('');
+  const [confirmEmail, setConfirmEmail] = useState('');
 
-  //Validar Inputs formulario y cambiar estilos
-  const validarInputs = (e) => {
+  //Validar Inputs del formulario al rellenarlos y cambiar estilos
+  const validateInputs = (e) => {
     e.preventDefault();
     switch (e.target.name) {
       case 'nombre':
-        setNombre(e.target.value)
-          if(!nombre.match('^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$')) {
+        setName(e.target.value)
+          if(!name.match('^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$')) {
             e.target.classList.add('incorrecto')
             e.target.classList.remove('correcto')      
           } else {
@@ -39,16 +40,16 @@ const PurchaseForm = () => {
           } 
         break;
       case 'direccion':
-        setDireccion(e.target.value)
-          if(direccion !== '') {
+        setDirecction(e.target.value)
+          if(direction !== '') {
             e.target.classList.add('correcto')      
           } else {
             e.target.classList.remove('correcto')
           } 
         break;
       case 'telefono':
-        setTelefono(e.target.value)
-          if(isNaN(telefono)) {
+        setPhone(e.target.value)
+          if(isNaN(phone)) {
             e.target.classList.add('incorrecto')      
             e.target.classList.remove('correcto')      
           } else {
@@ -58,7 +59,7 @@ const PurchaseForm = () => {
         break;
       case 'email':
         setEmail(e.target.value)
-          if(!email.includes('@')) {
+          if(!email.match(/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/)) {
             e.target.classList.add('incorrecto')      
             e.target.classList.remove('correcto')      
           } else {
@@ -67,8 +68,8 @@ const PurchaseForm = () => {
           } 
         break;
       case 'confirmar-email':
-        setConfirmarEmail(e.target.value)
-          if(confirmarEmail !== email) {
+        setConfirmEmail(e.target.value)
+          if(confirmEmail !== email) {
             e.target.classList.add('incorrecto')      
             e.target.classList.remove('correcto')      
           } else {
@@ -83,71 +84,74 @@ const PurchaseForm = () => {
   }
 
   //Validar inputs al enviar el formulario
-
-  const confirmarOrden = (e) => {
+  const submitForm = (e) => {
     e.preventDefault()
-    if(nombre === '' || direccion === '' || telefono === '' || email === '' || confirmarEmail === ''){
+    if(name === '' || direction === '' || phone === '' || email === '' || confirmEmail === ''){
       Swal.fire({
         icon: 'warning',
         title: `Debes rellenar el formulario para finalizar tu compra`,
         confirmButtonText: 'Ok',
       })
-    } else if (!nombre.match('^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$')) {
+    } else if (!name.match('^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$') || name.length <= 2) {
       Swal.fire({
         icon: 'error',
-        title: `El nombre no puede contener números`,
+        title: `El nombre no puede contener números y debe tener más de dos caracteres`,
         confirmButtonText: 'Ok',
       })
-    } else if (isNaN(telefono)) {
+    } else if (isNaN(phone)) {
       Swal.fire({
         icon: 'error',
         title: `El teléfono solo puede contener números`,
         confirmButtonText: 'Ok',
       })
-    } else if (!email.includes('@')) {
+    } else if (!email.match(/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/)) {
       Swal.fire({
         icon: 'error',
         title: `Introduce un email válido`,
         confirmButtonText: 'Ok',
       })
-    } else if (confirmarEmail !== email) {
+    } else if (confirmEmail !== email) {
       Swal.fire({
         icon: 'error',
         title: `El email no coincide`,
         confirmButtonText: 'Ok',
       })
     } else {
-      const orden = generarOrden(nombre, telefono, email, cart, total);
-      console.log(orden);
-      guardarOrden(cart, orden);
+      const order = generateOrder(name, phone, email, cart, total);
+      saveOrder(cart, order);
       setTimeout(() => {
         emptyCart();
         navigate('/tienda');
       }, 3500);
+      e.target.childNodes[5].childNodes[1].setAttribute('disabled', true)
     }
-
-    
 
   }
 
  
 
   return (
+    <>
+    {cart.length === 0 ?
+    <ItemListContainer />
+    :
     <div className='purchase-form'>
         <h1>¡Introduce tus datos para finalizar la compra!</h1>
-        <form className='form'>
-            <input type='text' name='nombre' placeholder='Nombre' onChange={validarInputs}
+        <form className='form' onSubmit={submitForm} >
+            <input type='text' name='nombre' placeholder='Nombre' onChange={validateInputs}
             ></input>
-            <input type='text' name='direccion' placeholder='Dirección' onChange={validarInputs}></input>
-            <input type='tel' name='telefono' placeholder='Teléfono' onChange={validarInputs}></input>
-            <input type='email' name='email' placeholder='Email' onChange={validarInputs}></input>
-            <input type='email' name='confirmar-email' placeholder='Confirmar Email' onChange={validarInputs}></input>
+            <input type='text' name='direccion' placeholder='Dirección' onChange={validateInputs}></input>
+            <input type='tel' name='telefono' placeholder='Teléfono' onChange={validateInputs}></input>
+            <input type='email' name='email' placeholder='Email' onChange={validateInputs}></input>
+            <input type='email' name='confirmar-email' placeholder='Confirmar Email' onChange={validateInputs}></input>
             <div className='form-buttons'>
                 <button onClick={toCart} className='atras'>Atras</button>
-                <button onClick={confirmarOrden} className='confirm-purchase'>Confirmar compra</button>
+                <button type='submit' className='confirm-purchase'>Confirmar compra</button>
             </div>
         </form>
     </div>
+    }
+    </>
   )
 }
 

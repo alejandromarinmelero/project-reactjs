@@ -12,6 +12,14 @@
         width: 100%;
     }
 
+    .loading {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .details {
         display: flex;
         flex-direction: column;
@@ -33,7 +41,7 @@
             .continue {
                 color: #0A3033;
                 background: none;
-                border: 1px solid #4C434A;
+                border: 1px solid #0A3033;
                 padding: 1rem;
                 transition: 0.2s ease-in-out all;
             }
@@ -46,17 +54,17 @@
             }
 
             .buy {
-                color: #0A3033;
-                background: none;
-                border: 1px solid #4C434A;
+                color: #f3f3f3;
+                background: #0A3033;
+                border: 1px solid #0A3033;
                 padding: 1rem;
                 transition: 0.2s ease-in-out all;
             }
         
             .buy:hover {
-                order: 1px solid #0A3033;
-                color: #f3f3f3;
-                background-color: #0A3033;
+                border: 1px solid #0A3033;
+                color: #0A3033;
+                background: none;
                 cursor: pointer;
             }
         }

@@ -13,7 +13,8 @@ const CartWidget = () => {
   }
 
   const { cart } = useContext(Shop);
-
+  
+  //variable para mostrar la cantidad de vinilos en el carrito
   const qty = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (

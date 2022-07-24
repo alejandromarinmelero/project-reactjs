@@ -6,9 +6,15 @@
     width: 100%;
     min-height: 100vh;
     padding: 3rem 2rem 5rem 2rem;
+    animation: appear 0.5s;
+
+    @keyframes appear {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
 
     h1 {
-        color: rgba(10, 48, 51, 0.8);
+        color: #287075;
     }
 
     .form {
@@ -88,6 +94,22 @@
             color: #f3f3f3;
             background-color: #0A3033;
             border: 1px solid #0A3033;
+            padding: 1rem;
+            transition: 0.2s ease-in-out all;
+        }
+
+        .confirm-purchase:disabled {
+            color: #f3f3f3;
+            background-color: #4C434A;
+            border: 1px solid #4C434A;
+            padding: 1rem;
+            transition: 0.2s ease-in-out all;
+        }
+
+        .confirm-purchase:disabled:hover {
+            color: #f3f3f3;
+            background-color: #4C434A;
+            border: 1px solid #4C434A;
             padding: 1rem;
             transition: 0.2s ease-in-out all;
         }

@@ -97,7 +97,7 @@
         }
                 
     
-        p {
+        .tienda {
             color: #0A3033;
             font-family: 'Josefin Sans', sans-serif;
             font-size: 1.2rem;
@@ -106,7 +106,21 @@
             padding: 0.5rem;
         }
     
-        p:hover {
+        .tienda:hover {
+            cursor: pointer;
+            color: #1B8188;
+        }
+
+        .contacto {
+            color: #0A3033;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            transition: 0.2s ease-in-out all;
+            padding: 0.5rem;
+        }
+    
+        .contacto:hover {
             cursor: pointer;
             color: #1B8188;
         }

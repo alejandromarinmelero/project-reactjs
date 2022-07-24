@@ -1,4 +1,5 @@
-const generarOrden = (nombre, telefono, email, productos, total) => {
+//Función para generar la orden del pedido con los datos del formulario y los vinilos comprados
+const generateOrder = (nombre, telefono, email, productos, total) => {
     return {
         buyer: {
             Nombre: nombre,
@@ -10,4 +11,4 @@ const generarOrden = (nombre, telefono, email, productos, total) => {
     }
 }
 
-export default generarOrden;
+export default generateOrder;

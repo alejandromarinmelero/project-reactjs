@@ -5,7 +5,6 @@ import { Shop } from '../../context/CartContext'
 import { useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
-
 const Cart = () => {
 
   const { cart, emptyCart, deleteItem, quantityDecrease, quantityIncrease, total} = useContext(Shop);
@@ -17,11 +16,12 @@ const Cart = () => {
     window.scroll(0,0)
   }
 
+  //Definir el precio total de un vinilo segun la cantidad añadida
   const priceByQuantity = (item) => {
     return item.price * item.quantity;
   }
 
-  const confirmarCompra = () => {
+  const confirmPurchase = () => {
       navigate('/purchase');
       window.scroll(0,0)
   }
@@ -51,7 +51,22 @@ const Cart = () => {
                   <button disabled={item.quantity >= item.stock && true} onClick={() => quantityIncrease(item)} className='increase-quantity'>+</button>
                 </td>
                 <td className='element-price'>{priceByQuantity(item).toFixed(2)} €</td>
-                <td className='element-edit'><img id="image" data-size="512" className='remove-item' src="https://cdn.icon-icons.com/icons2/1097/PNG/512/1485477104-basket_78591.png" title="Icono Cesta de la basura, eliminar  Gratis" alt="Icono cesta de la basura, eliminar" onClick ={() => deleteItem(item)}></img></td>
+                <td className='element-edit'><img id="image" data-size="512" className='remove-item' src="https://cdn.icon-icons.com/icons2/1097/PNG/512/1485477104-basket_78591.png" title="Icono Cesta de la basura, eliminar  Gratis" alt="Icono cesta de la basura, eliminar" onClick ={() => {
+                  Swal.fire({
+                    title: 'Estas segur@?',
+                    text: `Eliminar\n\n${item.artist} - ${item.name}`,
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Eliminar!'
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                      deleteItem(item)
+                      Swal.fire('Se elimino correctamente', '', 'success');
+                    }
+                  })
+                }}></img></td>
               </tr>
             })}
             </tbody>
@@ -77,7 +92,7 @@ const Cart = () => {
               )
             }}>Vaciar carrito</button>
             <button className='continue-shoping' onClick={continueShoping}>Seguir comprando</button>
-            <button className='confirm-purchase' onClick={() => confirmarCompra(cart)}>Confirmar Compra</button>
+            <button className='confirm-purchase' onClick={confirmPurchase}>Confirmar Compra</button>
           </div>
         </div>
         :

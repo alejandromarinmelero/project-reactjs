@@ -3,38 +3,23 @@ import CartWidget from '../CartWidget';
 import './style.scss';
 import { useNavigate } from 'react-router-dom'
 import {Link} from 'react-router-dom'
-import { useRef } from 'react';
-
+import { NavLink } from "react-router-dom";
 
 function NavBar () {
-    
-    const tienda = useRef('');
-    const contacto = useRef('');
+
+    //Definir estilos de los enlaces del NavBar cuando esté en la sección que corresponda
+    let activeStyle = {
+        background: "#0A3033",
+        borderRadius: '10px',
+        color: '#f3f3f3'
+    };
 
     const navigate = useNavigate();
 
     const home = (e) => {
         navigate('/')
-        contacto.current.classList.remove('selected')
-        tienda.current.classList.remove('selected')
     }
 
-    const selected = (e) => {
-        switch (e.target.attributes.name.value) {
-            case 'tienda':
-                navigate('/tienda');
-                e.target.classList.add('selected')
-                contacto.current.classList.remove('selected')
-                break;
-            case 'contacto':
-                navigate('/contact');
-                e.target.classList.add('selected')
-                tienda.current.classList.remove('selected')
-                break;
-            default:
-                break;
-        }
-    }
 
     return (
             <div className='navbar' id='navbar' name='navbar'>
@@ -43,7 +28,12 @@ function NavBar () {
                     <h2>B-NylFactory</h2>
                 </div>
                 <div className='navbar-links'>
-                    <p name='tienda' ref={tienda} onClick={selected}>Tienda</p>
+                    <NavLink to="/tienda" className='tienda' style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                    }
+                    >
+                    Vinilos
+                    </NavLink>
                     <div className='dropdown'>
                         <li className='dropbtn'>Géneros
                             <ul className='dropdown-menu'>
@@ -55,7 +45,12 @@ function NavBar () {
                             </ul>
                         </li>
                     </div>
-                    <p name='contacto' ref={contacto} onClick={selected}>Contacto</p>
+                    <NavLink to="/contact" className='contacto' style={({ isActive }) =>
+                        isActive ? activeStyle : undefined
+                    }
+                    >
+                    Contacto
+                    </NavLink>
                     <CartWidget />
                 </div>
             </div>
