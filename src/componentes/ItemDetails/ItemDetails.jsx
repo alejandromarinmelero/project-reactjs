@@ -66,8 +66,8 @@ const ItemDetails = ({ details }) => {
               Swal.fire('Se añadió al carrito', '', 'success');
             }
           }
-        )    
-      }
+        )  
+      }  
   }
 
   return (

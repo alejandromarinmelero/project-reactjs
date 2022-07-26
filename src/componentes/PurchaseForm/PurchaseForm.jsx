@@ -119,6 +119,7 @@ const PurchaseForm = () => {
       })
     } else {
       const order = generateOrder(name, phone, email, cart, total);
+      console.log(order);
       saveOrder(cart, order);
       setTimeout(() => {
         navigate('/tienda');

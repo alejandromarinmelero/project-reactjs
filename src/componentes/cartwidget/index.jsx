@@ -13,21 +13,13 @@ const CartWidget = () => {
   }
 
   const { cart } = useContext(Shop);
-
-  //Obtener productos del LocalStorage
-  const getItemsFromLocalStorage = JSON.parse(localStorage.getItem('vinilos'));
   
   //Calcular la cantidad de vinilos en el carrito
   const qty = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
     <div className='cart-widget' onClick={toCart}>
-        {cart.length ? 
-          <span>{qty}</span> 
-          : getItemsFromLocalStorage ?
-          <span>{getItemsFromLocalStorage.length}</span>
-          :
-          '0'}
+        {cart.length ? <span>{qty}</span> : '0'}
         <img src='/assets/iconos/cart.png' alt=''/>
     </div>
   )

@@ -5,7 +5,6 @@ import './App.scss';
 import MainApp from './componentes/MainApp/MainApp';
 
 function App() {
-
   return (
     <MainApp />
   );

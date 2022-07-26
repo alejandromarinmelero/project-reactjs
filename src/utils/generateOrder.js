@@ -7,7 +7,8 @@ const generateOrder = (nombre, telefono, email, productos, total) => {
             Email: email
         },
         Vinilos: productos,
-        Total: total
+        Total: total,
+        Fecha: new Date().toLocaleString()
     }
 }
 
