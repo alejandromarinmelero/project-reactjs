@@ -129,8 +129,6 @@ const PurchaseForm = () => {
 
   }
 
- 
-
   return (
     <>
     {cart.length === 0 ?
