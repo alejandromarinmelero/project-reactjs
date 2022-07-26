@@ -51,7 +51,7 @@ const Cart = () => {
                   <button disabled={item.quantity >= item.stock && true} onClick={() => quantityIncrease(item)} className='increase-quantity'>+</button>
                 </td>
                 <td className='element-price'>{priceByQuantity(item).toFixed(2)} €</td>
-                <td className='element-edit'><img id="image" data-size="512" className='remove-item' src="https://cdn.icon-icons.com/icons2/1097/PNG/512/1485477104-basket_78591.png" title="Icono Cesta de la basura, eliminar  Gratis" alt="Icono cesta de la basura, eliminar" onClick ={() => {
+                <td className='element-edit'><img id="image" className='remove-item' src="https://cdn.icon-icons.com/icons2/1097/PNG/512/1485477104-basket_78591.png" alt="Icono cesta de la basura, eliminar" onClick ={() => {
                   Swal.fire({
                     title: 'Estas segur@?',
                     text: `Eliminar\n\n${item.artist} - ${item.name}`,

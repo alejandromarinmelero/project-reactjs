@@ -1,5 +1,4 @@
 import React, { createContext, useState } from 'react'
-import Swal from "sweetalert2"
 
 export const Shop = createContext(); 
 
@@ -26,7 +25,8 @@ const CartContext = ({ children }) => {
 
     //Vaciar carrito
     const emptyCart = () => {
-      setCart([])
+      setCart([]);
+      localStorage.clear()
     }
 
     //Eliminar un Item del carrito
@@ -59,7 +59,7 @@ const CartContext = ({ children }) => {
 
 
   return (
-    <Shop.Provider value={{ addItem, cart, emptyCart, deleteItem, quantityDecrease, quantityIncrease, Swal, isInCart, total}}>
+    <Shop.Provider value={{ addItem, cart, emptyCart, deleteItem, quantityDecrease, quantityIncrease, isInCart, total }}>
         {children}
     </Shop.Provider>
   )

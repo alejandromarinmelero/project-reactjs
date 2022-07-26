@@ -5,11 +5,12 @@ import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { Shop } from '../../context/CartContext'
 import { Circles } from 'react-loader-spinner'
+import Swal from 'sweetalert2'
 
 const ItemDetails = ({ details }) => {
 
   //Acceso a los values del CartContext
-  const { isInCart, addItem, Swal } = useContext(Shop);
+  const { isInCart, addItem } = useContext(Shop);
   
   const navigate = useNavigate();
 
@@ -67,7 +68,6 @@ const ItemDetails = ({ details }) => {
           }
         )    
       }
-
   }
 
   return (

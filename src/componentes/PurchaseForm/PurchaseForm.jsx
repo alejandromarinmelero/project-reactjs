@@ -3,10 +3,11 @@ import './style.scss'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { Shop } from '../../context/CartContext'
-import generateOrder from '../../utils/generarOrden'
-import saveOrder from '../../utils/guardarOrden'
+import generateOrder from '../../utils/generateOrder'
+import saveOrder from '../../utils//saveOrder'
 import { useState } from 'react'
 import ItemListContainer from '../../contenedores/ItemListContainer/ItemListContainer'
+import Swal from "sweetalert2"
 
 const PurchaseForm = () => {
 
@@ -17,7 +18,7 @@ const PurchaseForm = () => {
     window.scroll(0,0)
   }
 
-  const { cart, total, Swal, emptyCart } = useContext(Shop);
+  const { cart, total, emptyCart } = useContext(Shop);
 
   const [name, setName] = useState('');
   const [direction, setDirecction] = useState('');
@@ -120,8 +121,8 @@ const PurchaseForm = () => {
       const order = generateOrder(name, phone, email, cart, total);
       saveOrder(cart, order);
       setTimeout(() => {
-        emptyCart();
         navigate('/tienda');
+        emptyCart();
       }, 3500);
       e.target.childNodes[5].childNodes[1].setAttribute('disabled', true)
     }
