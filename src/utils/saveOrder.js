@@ -22,22 +22,32 @@ const saveOrder = (cart, order) => {
                 outOfStock.push(vinilos)
                 alert('lo sentimos, no hay stock :(')
             }
-
-            if(outOfStock.length === 0) {
-                addDoc(collection(db, 'orders'), order).then(({ id }) => {
-                    batch.commit().then(() => {
-                        Swal.fire({
-                            icon: 'success',
-                            title: `¡Genial!\n\nTu número de pedido es:\n\n${id}`,
-                            text: `Te enviaremos un correo a ${order.buyer.Email} con los datos de compra\n\n¡Gracias :)!`,
-                            confirmButtonText: 'Ok',
-                        })
-                    })
-                }).catch(err => console.log(err))   
-            } 
         }).catch(err => console.log(`Ocurrió un error: ${err}`))
-    
   });
+
+  if(outOfStock.length === 0) {
+    addDoc(collection(db, 'orders'), order).then(({ id }) => {
+        batch.commit().then(() => {
+            Swal.fire({
+                icon: 'success',
+                title: `¡Genial!\n\nTu número de pedido es:\n\n${id}`,
+                text: `Te enviaremos un correo a ${order.buyer.Email} con los datos de compra\n\n¡Gracias :)!`,
+                confirmButtonText: 'Ok',
+            })
+        })
+    }).catch(err => console.log(err))   
+} else {
+    let mensaje = '';
+    for(const vinyl of outOfStock) {
+        mensaje += `${vinyl.title}`
+        Swal.fire({
+            icon: 'error',
+            title: `Lo sentimos`,
+            text: `Los siguientes productos están fuera de stock\n\n${mensaje}`,
+            confirmButtonText: 'Ok',
+        })
+    }
+}
 
 }
 

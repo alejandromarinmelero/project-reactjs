@@ -14,9 +14,10 @@ const CartWidget = () => {
 
   const { cart } = useContext(Shop);
 
+  //Obtener productos del LocalStorage
   const getItemsFromLocalStorage = JSON.parse(localStorage.getItem('vinilos'));
   
-  //variable para mostrar la cantidad de vinilos en el carrito
+  //Calcular la cantidad de vinilos en el carrito
   const qty = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (

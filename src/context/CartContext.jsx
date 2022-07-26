@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react'
+import { useEffect } from 'react';
 
 export const Shop = createContext(); 
 
@@ -17,6 +18,19 @@ const CartContext = ({ children }) => {
         setCart([...cart, {...producto, quantity: cantidad, precioTotal: producto.price * cantidad}]);
       }
     }
+
+    /////////////////////// LocalStorage ///////////////////////////
+
+    //Recuperar productos del LocalStorage y añadirlos al carrito al recargar la pagina
+    useEffect(() => {
+      const getItemFromLocalStorage = localStorage.getItem('vinilos');
+      getItemFromLocalStorage && setCart(JSON.parse(getItemFromLocalStorage))
+    }, [])
+
+    //Añadir vinilos del carrito al LocalStorage
+    cart.length > 0 && localStorage.setItem('vinilos', JSON.stringify(cart))
+
+    ////////////////////////////////////////////////////////////////
 
     //Encontrar el producto duplicado
     const isInCart = (producto) => {
